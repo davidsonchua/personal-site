@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <!-- Primary Meta Tags -->
+  <title>About Davidson Chua - Founder, Builder, Community Advocate</title>
+  <meta name="title" content="About Davidson Chua - Founder, Builder, Community Advocate">
+  <meta name="description" content="Learn about Davidson Chua's journey from marine engineering to building communities in Singapore's automotive and tech space. Featured in The Straits Times, founder of Autosave." />
+  <meta name="author" content="Davidson Chua">
+  <meta name="keywords" content="Davidson Chua, about, founder story, Singapore entrepreneur, automotive community, NUS graduate, business analytics, community building">
+  <link rel="canonical" href="https://davidsonchua.cc/about">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://davidsonchua.cc/about">
+  <meta property="og:title" content="About Davidson Chua - Founder, Builder, Community Advocate">
+  <meta property="og:description" content="Learn about Davidson Chua's journey from marine engineering to building communities in Singapore's automotive and tech space.">
+  <meta property="og:image" content="https://davidsonchua.cc/assets/profile.jpeg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://davidsonchua.cc/about">
+  <meta name="twitter:title" content="About Davidson Chua">
+  <meta name="twitter:description" content="Learn about Davidson Chua's journey from marine engineering to building communities in Singapore's automotive and tech space.">
+  <meta name="twitter:image" content="https://davidsonchua.cc/assets/profile.jpeg">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Davidson Chua",
+    "url": "https://davidsonchua.cc",
+    "image": "https://davidsonchua.cc/assets/profile.jpeg",
+    "jobTitle": "Founder & Builder",
+    "description": "Founder & media builder focused on mobility, communities, and explaining how things work",
+    "alumniOf": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "National University of Singapore",
+        "url": "https://www.nus.edu.sg",
+        "sameAs": "https://en.wikipedia.org/wiki/National_University_of_Singapore"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "Singapore Polytechnic",
+        "url": "https://www.sp.edu.sg"
+      }
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Autosave",
+      "url": "https://autosave.club"
+    },
+    "affiliation": [
+      {
+        "@type": "Organization",
+        "name": "ROADS.sg",
+        "url": "https://roads.sg"
+      }
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/in/davidsonchua/",
+      "https://t.me/davidsonchua"
+    ],
+    "knowsAbout": [
+      "Business Analytics",
+      "Automotive Industry",
+      "Community Building",
+      "Media",
+      "Road Safety",
+      "Mobility",
+      "Singapore Tech Ecosystem",
+      "Marine Engineering"
+    ]
+  }
+  </script>
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://davidsonchua.cc"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About",
+        "item": "https://davidsonchua.cc/about"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111111;
+      --muted:#4b5563;
+      --hair:#e5e7eb;
+      --accent:#2563eb;
+      --max:760px;
+    }
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    a{
+      color:#111;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    a:hover{ opacity:.75; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+
+    /* Header */
+    .header{
+      margin-bottom: 48px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--hair);
+    }
+    
+    .backLink{
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      color: var(--muted);
+      text-decoration: none;
+      margin-bottom: 24px;
+    }
+    .backLink:hover{
+      color: var(--text);
+    }
+    .backArrow{
+      width: 16px;
+      height: 16px;
+    }
+
+    .portrait{
+      width: 96px;
+      height: 96px;
+      border-radius: 999px;
+      border: 1px solid var(--hair);
+      overflow: hidden;
+      margin-bottom: 20px;
+      background: #f7f7f7;
+    }
+    .portrait img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    h1{
+      font-size: 42px;
+      line-height: 1.1;
+      margin: 0 0 12px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle{
+      font-size: 19px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* Content */
+    .content{
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    .content p{
+      margin: 0 0 24px;
+    }
+
+    .content h2{
+      font-size: 28px;
+      font-weight: 700;
+      margin: 48px 0 20px;
+      letter-spacing: -0.3px;
+    }
+
+    .content h2:first-of-type{
+      margin-top: 0;
+    }
+
+    .content strong{
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    /* Highlight boxes */
+    .highlight{
+      background: #f8fafc;
+      border-left: 3px solid var(--accent);
+      padding: 20px 24px;
+      margin: 32px 0;
+      border-radius: 6px;
+    }
+
+    .highlight p{
+      margin: 0;
+    }
+
+    /* Timeline */
+    .timeline{
+      margin: 32px 0;
+      position: relative;
+      padding-left: 32px;
+    }
+
+    .timeline::before{
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: var(--hair);
+    }
+
+    .timelineItem{
+      position: relative;
+      margin-bottom: 32px;
+    }
+
+    .timelineItem::before{
+      content: '';
+      position: absolute;
+      left: -27px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid white;
+    }
+
+    .timelineYear{
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .timelineTitle{
+      font-weight: 600;
+      margin-bottom: 6px;
+      font-size: 17px;
+    }
+
+    .timelineDesc{
+      color: var(--muted);
+      font-size: 16px;
+      margin: 0;
+    }
+
+    /* CTA Section */
+    .cta{
+      margin-top: 56px;
+      padding: 32px 0;
+      border-top: 1px solid var(--hair);
+      text-align: center;
+    }
+
+    .cta h2{
+      font-size: 24px;
+      margin: 0 0 16px;
+    }
+
+    .cta p{
+      color: var(--muted);
+      margin: 0 0 24px;
+      font-size: 16px;
+    }
+
+    .ctaButtons{
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s;
+      font-size: 15px;
+    }
+
+    .btn:hover{
+      transform: translateY(-1px);
+      opacity: 1;
+    }
+
+    .btnPrimary{
+      background: var(--text);
+      color: white;
+    }
+
+    .btnSecondary{
+      border: 1px solid var(--hair);
+      background: white;
+      color: var(--text);
+    }
+
+    /* Footer */
+    .footer{
+      margin-top: 56px;
+      padding-top: 24px;
+      border-top: 1px solid var(--hair);
+      text-align:center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 640px){
+      h1{ font-size: 34px; }
+      .content{ font-size: 16px; }
+      .content h2{ font-size: 24px; }
+      .timeline{ padding-left: 28px; }
+    }
+  </style>
+</head>
+
+<body>
+  <article class="wrap">
+    <header class="header">
+      <a href="/" class="backLink">
+        <svg class="backArrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        <span>Back to home</span>
+      </a>
+
+      <div class="portrait">
+        <img src="assets/profile.jpeg" alt="Davidson Chua" width="96" height="96" />
+      </div>
+
+      <h1>About Davidson Chua</h1>
+      <p class="subtitle">From engineering to building communities that matter</p>
+    </header>
+
+    <div class="content">
+      <h2>How I got here</h2>
+      
+      <p>
+        I didn't start out thinking I'd be building communities or working in media. My journey began in a completely different world—marine engineering. I studied at <strong>Singapore Polytechnic</strong>, earning a Diploma with Merit in Marine Engineering, drawn to the precision and problem-solving nature of how complex systems work together.
+      </p>
+
+      <p>
+        That fascination with systems—understanding how things operate, why they break, and how to make them more reliable—became the thread that's run through everything I've done since. Whether I'm looking at a ship's propulsion system, analyzing data patterns, or building an online community, I'm always asking the same question: <em>How does this actually work?</em>
+      </p>
+
+      <p>
+        After polytechnic, I spent time at <strong>BP</strong>, working in large-scale operations where safety and reliability weren't just buzzwords—they were life-or-death imperatives. That experience shaped how I think about building anything: with intentionality, attention to detail, and deep respect for the people who depend on what you create.
+      </p>
+
+      <p>
+        Eventually, I found my way to the <strong>National University of Singapore (NUS)</strong>, where I pursued Business Analytics. It was during this time that I started connecting the dots between understanding systems and understanding people. Data tells stories, but only if you know how to listen—and more importantly, if you care about the people behind the numbers.
+      </p>
+
+      <h2>The shift to building</h2>
+
+      <p>
+        Somewhere along the way, I stopped being satisfied with just analyzing or optimizing existing systems. I wanted to create. To experiment. To test ideas that felt like they could create real value, even if they didn't fit a traditional job description.
+      </p>
+
+      <p>
+        That led to a lot of tinkering—side projects, small experiments, things I built just to see if they'd work. Some did. Most didn't. But the process taught me more than any job ever could. I learned that <strong>building isn't about having all the answers upfront</strong>—it's about being curious enough to try, disciplined enough to learn from failure, and honest enough to admit when something isn't working.
+      </p>
+
+      <div class="highlight">
+        <p>
+          <strong>My philosophy:</strong> Communities aren't just distribution channels. They're relationships built on trust, relevance, and long-term value. The best communities aren't transactional—they're transformational.
+        </p>
+      </div>
+
+      <p>
+        One of those experiments grew into <strong><a href="https://autosave.club" target="_blank" rel="noopener noreferrer">Autosave</a></strong>, where I focus on community-led brand building in Singapore's automotive space. The automotive world is deeply personal—people don't just own cars, they identify with them. Building a community around that requires authenticity, not just marketing tactics.
+      </p>
+
+      <p>
+        At Autosave, I've learned that the best communities form when you give people something genuinely valuable: connection, knowledge, or a sense of belonging. Everything else is secondary.
+      </p>
+
+      <h2>Contributing to what matters</h2>
+
+      <p>
+        Beyond Autosave, I've had the privilege of contributing to <strong><a href="https://roads.sg" target="_blank" rel="noopener noreferrer">ROADS.sg</a></strong>, a platform focused on road safety in Singapore. Road safety might not sound exciting to everyone, but it's one of those areas where small improvements have huge ripple effects.
+      </p>
+
+      <p>
+        Through ROADS.sg, I share practical perspectives on responsible road use and work directly with key stakeholders like the Traffic Police (TP) and Land Transport Authority (LTA). It's taught me that advocacy doesn't have to be loud or preachy—it can be creative, data-driven, and grounded in real-world experience.
+      </p>
+
+      <p>
+        I've also been fortunate to be featured in <strong>The Straits Times</strong> on multiple occasions, discussing topics like Singapore's evolution as a tech city, where tech jobs are really being created, and how generative AI is reshaping expectations for young professionals. These conversations have given me a platform to share what I've learned—and more importantly, to learn from others.
+      </p>
+
+      <h2>My journey so far</h2>
+
+      <div class="timeline">
+        <div class="timelineItem">
+          <div class="timelineYear">Early Days</div>
+          <div class="timelineTitle">Singapore Polytechnic - Marine Engineering</div>
+          <p class="timelineDesc">Graduated with Merit (Highest Distinction), developed love for understanding complex systems</p>
+        </div>
+
+        <div class="timelineItem">
+          <div class="timelineYear">Professional</div>
+          <div class="timelineTitle">BP - Operations & Engineering</div>
+          <p class="timelineDesc">Learned about large-scale operations, safety-critical environments, and system reliability</p>
+        </div>
+
+        <div class="timelineItem">
+          <div class="timelineYear">Education</div>
+          <div class="timelineTitle">National University of Singapore - Business Analytics</div>
+          <p class="timelineDesc">Connected systems thinking with data and people, bridging technical and business perspectives</p>
+        </div>
+
+        <div class="timelineItem">
+          <div class="timelineYear">Building</div>
+          <div class="timelineTitle">Founded Autosave</div>
+          <p class="timelineDesc">Community-led brand building in automotive space, focusing on authentic relationships and value creation</p>
+        </div>
+
+        <div class="timelineItem">
+          <div class="timelineYear">Advocacy</div>
+          <div class="timelineTitle">Contributor to ROADS.sg</div>
+          <p class="timelineDesc">Road safety advocacy through creative engagement, working with TP and LTA stakeholders</p>
+        </div>
+
+        <div class="timelineItem">
+          <div class="timelineYear">Media</div>
+          <div class="timelineTitle">Featured in The Straits Times</div>
+          <p class="timelineDesc">Multiple features and podcasts discussing Singapore's tech ecosystem, jobs, and AI's impact</p>
+        </div>
+      </div>
+
+      <h2>What drives me</h2>
+
+      <p>
+        At the core, I care about <strong>building things that feel useful, honest, and grounded in real experience</strong>. I'm skeptical of hype and buzzwords. I value execution over ideas. And I believe that the best way to understand something is to try building it yourself.
+      </p>
+
+      <p>
+        I'm drawn to problems where there's a gap between how things are and how they could be—especially when that gap involves people, relationships, or communities. I believe in:
+      </p>
+
+      <p>
+        <strong>Long-term thinking</strong> over short-term wins. Communities and trust take time to build, and there are no shortcuts.
+      </p>
+
+      <p>
+        <strong>Transparency and honesty</strong> in everything I do. People can sense when you're being authentic versus when you're just optimizing for metrics.
+      </p>
+
+      <p>
+        <strong>Learning by doing</strong>. The best insights come from real-world experience, not theory or frameworks.
+      </p>
+
+      <p>
+        <strong>Collaboration</strong> with people who care deeply about their work. The best outcomes happen when everyone involved is genuinely invested.
+      </p>
+
+      <h2>What's next</h2>
+
+      <p>
+        I'm always working on something—whether it's growing Autosave, contributing to conversations about Singapore's tech and mobility landscape, or experimenting with new ideas that might become something bigger.
+      </p>
+
+      <p>
+        I'm particularly interested in how <strong>communities can drive real value</strong> in ways that traditional marketing or distribution channels can't. I'm also fascinated by the intersection of <strong>technology and human behavior</strong>—not in a manipulative way, but in understanding how tools can genuinely improve people's lives.
+      </p>
+
+      <p>
+        If you're building something interesting, working on problems that matter, or just want to have a thoughtful conversation about communities, mobility, or how things work—<a href="/cdn-cgi/l/email-protection#f49095829d90879b9a979c8195b49b8180989b9b9fda979b99">I'd love to hear from you</a>.
+      </p>
+    </div>
+
+    <section class="cta">
+      <h2>Let's connect</h2>
+      <p>Whether you want to collaborate, chat about ideas, or just say hi.</p>
+      
+      <div class="ctaButtons">
+        <a href="/cdn-cgi/l/email-protection#d3b7b2a5bab7a0bcbdb0bba6b293bca6a7bfbcbcb8fdb0bcbe" class="btn btnPrimary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          Email me
+        </a>
+        
+        <a href="https://www.linkedin.com/in/davidsonchua/" target="_blank" rel="noopener noreferrer" class="btn btnSecondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 23.5h4V7.98h-4V23.5zM8.5 7.98h3.83v2.12h.05c.53-1 1.84-2.12 3.79-2.12 4.05 0 4.8 2.66 4.8 6.12v9.4h-4v-8.33c0-1.99-.04-4.56-2.78-4.56-2.78 0-3.2 2.17-3.2 4.41v8.48h-4V7.98z"/>
+          </svg>
+          LinkedIn
+        </a>
+
+        <a href="/" class="btn btnSecondary">
+          View my work
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      © <time datetime="2026">2026</time> Davidson Chua · 
+      <a href
