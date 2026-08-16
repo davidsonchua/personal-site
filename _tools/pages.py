@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Page content for davidsonchua.cc — run via build.py"""
 import os, shutil, json, html
-from build import (BASE, OUT, PERSON_ID, SITE_ID, INFLUENCEES_ID, AUTOSAVE_ID,
+from build import (BASE, OUT, PERSON_ID, SITE_ID, INFLUENCEES_ID, AUTOSAVE_ID, TELEQUOTES_ID,
                    PERSON, CORE_GRAPH, page, write, breadcrumb, TODAY)
 
 # ===========================================================================
@@ -47,7 +47,7 @@ HOME_BODY = """
           <li><span class="statNum">20,000+</span><span class="statLabel">Autosave community members</span></li>
           <li><span class="statNum">1,200+</span><span class="statLabel">Creators indexed on Influencees</span></li>
           <li><span class="statNum">20M+</span><span class="statLabel">Monthly road-safety impressions via ROADS.sg</span></li>
-          <li><span class="statNum">2</span><span class="statLabel">APAC Insider business awards</span></li>
+          <li><span class="statNum">2</span><span class="statLabel">Industry awards won in 2025</span></li>
         </ul>
       </div>
     </section>
@@ -76,9 +76,19 @@ HOME_BODY = """
             </div>
             <p>Singapore's most active automotive community — 20,000+ members, owner meets,
               and motoring media. Brand campaigns with Mercedes-Benz, Shell, Porsche and
-              Volkswagen Group. Incubated at NUS Enterprise and BLOCK71.</p>
+              Volkswagen Group. Named Best Automotive Community &amp; Media Platform 2025 &mdash; Singapore.</p>
             <span class="cardLink">www.autosave.club</span>
           </a>
+
+          <div class="card">
+            <div class="cardTop">
+              <span class="cardName">Telequotes</span>
+              <span class="tag">Co-founder &middot; 2024</span>
+            </div>
+            <p>Formerly SG Cars. A Singapore automotive marketplace connecting private sellers
+              with ready buyers and dealers, grown out of a Telegram marketplace. Named
+              Most Innovative Automotive Marketplace 2025 by APAC Insider.</p>
+          </div>
 
         </div>
         <p class="small muted" style="margin-top:16px">
@@ -97,6 +107,11 @@ HOME_BODY = """
             <div class="tlWhat"><strong>Founder &amp; CEO, Influencees</strong>
               <p>Co-founded with Edwin Koh out of the NUS Venture Initiation Programme. Raised a
                 six-figure round to build the trust layer for the creator economy.</p></div>
+          </li>
+          <li>
+            <span class="tlWhen">2024 —</span>
+            <div class="tlWhat"><strong>Co-founder, Telequotes (formerly SG Cars)</strong>
+              <p>A Telegram car marketplace built into a platform for private sellers and dealers.</p></div>
           </li>
           <li>
             <span class="tlWhen">2022 —</span>
@@ -179,8 +194,18 @@ ABOUT_BODY = """
           Motorist and GetGo.</p>
 
         <p>The business was incorporated as <strong>Autosave Pte. Ltd.</strong> (UEN 202431449C)
-          and incubated at <strong>NUS Enterprise</strong> and <strong>BLOCK71</strong>. It has been
-          recognised at the <strong>APAC Insider Singapore Business Awards</strong> in 2025 and 2026.</p>
+          and incubated at <strong>NUS Enterprise</strong> and <strong>BLOCK71</strong>. In 2025 it was
+          named <strong><a href="https://www.corporatevision-news.com/winners/sg-cars/" rel="noopener">Best
+          Automotive Community &amp; Media Platform 2025 &mdash; Singapore</a></strong> in Corporate
+          Vision's Automotive Awards.</p>
+
+        <h2>Telequotes</h2>
+        <p>Alongside the community sat a different problem: private sellers had no transparent way
+          to compare what their car was actually worth. That started as a Telegram marketplace called
+          <strong>SG Cars</strong> and became <strong>Telequotes</strong>, a platform connecting
+          sellers with ready buyers and dealers. It was named
+          <strong><a href="https://apacinsider.digital/winners/sg-cars/" rel="noopener">Most Innovative
+          Automotive Marketplace 2025</a></strong> by APAC Insider.</p>
 
         <p>I also co-created <a href="https://baycityculture.com/" rel="noopener">Bay City Culture</a>,
           the publication where a lot of Autosave's motoring writing lives, and I contribute to
@@ -245,6 +270,14 @@ ABOUT_BODY = """
           <dd>Autosave (Autosave Pte. Ltd., UEN 202431449C) is Singapore's most active automotive
             community, founded by Davidson Chua in 2022, with more than 20,000 members.</dd>
 
+          <dt>What awards has Davidson Chua's work won?</dt>
+          <dd>Autosave was named
+            <a href="https://www.corporatevision-news.com/winners/sg-cars/" rel="noopener">Best Automotive
+            Community &amp; Media Platform 2025 &mdash; Singapore</a> in Corporate Vision's Automotive
+            Awards, and Telequotes (formerly SG Cars) was named
+            <a href="https://apacinsider.digital/winners/sg-cars/" rel="noopener">Most Innovative
+            Automotive Marketplace 2025</a> by APAC Insider.</dd>
+
           <dt>How can I contact Davidson Chua?</dt>
           <dd>By <a href="mailto:davidsonchua@outlook.com">email</a>,
             <a href="https://www.linkedin.com/in/davidsonchua/" rel="me noopener">LinkedIn</a> or
@@ -280,8 +313,8 @@ VENTURES_BODY = """
       <div class="shell">
         <p class="eyebrow">Ventures</p>
         <h1>Companies founded by Davidson Chua</h1>
-        <p class="lead">Two businesses, both built around the same idea: communities work when
-          people can tell who to trust.</p>
+        <p class="lead">Three businesses, all built around the same idea: markets work better when
+          people can tell who — and what — to trust.</p>
       </div>
     </section>
 
@@ -331,7 +364,8 @@ VENTURES_BODY = """
 
         <h3>Recognition</h3>
         <ul>
-          <li>APAC Insider Singapore Business Awards — 2025 and 2026</li>
+          <li><a href="https://www.corporatevision-news.com/winners/sg-cars/" rel="noopener">Best Automotive
+            Community &amp; Media Platform 2025 — Singapore</a>, Corporate Vision Automotive Awards</li>
           <li>Incubated at NUS Enterprise and BLOCK71</li>
         </ul>
 
@@ -342,6 +376,24 @@ VENTURES_BODY = """
         </ul>
 
         <p><a class="btn ghost" href="https://www.autosave.club" rel="noopener">Visit Autosave</a></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <h2>Telequotes</h2>
+        <p class="muted small">Co-founder · Founded 2024 · formerly SG Cars · Singapore</p>
+
+        <p>Telequotes is a Singapore automotive marketplace that connects private sellers with
+          ready buyers and dealers, so sellers can compare offers transparently instead of taking
+          the first number they're given. Like Autosave, it started life as a Telegram channel —
+          under the name <strong>SG Cars</strong> — before becoming a full platform.</p>
+
+        <h3>Recognition</h3>
+        <ul>
+          <li><a href="https://apacinsider.digital/winners/sg-cars/" rel="noopener">Most Innovative
+            Automotive Marketplace 2025</a>, APAC Insider</li>
+        </ul>
       </div>
     </section>
 
@@ -446,6 +498,22 @@ MEDIA_BODY = """
         </article>
 
         <article class="mediaItem">
+          <div class="mediaMeta"><span class="outlet">Corporate Vision</span><span class="tag">Award</span></div>
+          <h3>Best Automotive Community &amp; Media Platform 2025 — Singapore</h3>
+          <p class="muted">Autosave recognised in Corporate Vision's Automotive Awards for
+            "strong grassroots engagement and relevant, community-driven content."</p>
+          <p class="small"><a href="https://www.corporatevision-news.com/winners/sg-cars/" rel="noopener">See the winners page</a></p>
+        </article>
+
+        <article class="mediaItem">
+          <div class="mediaMeta"><span class="outlet">APAC Insider</span><span class="tag">Award</span></div>
+          <h3>Most Innovative Automotive Marketplace 2025</h3>
+          <p class="muted">Telequotes (formerly SG Cars) recognised for turning a Telegram
+            marketplace into a platform connecting private sellers with buyers and dealers.</p>
+          <p class="small"><a href="https://apacinsider.digital/winners/sg-cars/" rel="noopener">See the winners page</a></p>
+        </article>
+
+        <article class="mediaItem">
           <div class="mediaMeta"><span class="outlet">ChargedUp 2026</span><span class="tag">Speaker</span></div>
           <h3>Singapore's largest EV conference</h3>
           <p class="muted">Speaker at ChargedUp 2026, 23–24 July 2026, Perennial Business City,
@@ -502,6 +570,7 @@ CONTACT_BODY = """
         <ul class="contactList">
           <li><span class="k">Influencees</span><a href="https://www.influencees.com" rel="noopener">influencees.com</a></li>
           <li><span class="k">Autosave</span><a href="https://www.autosave.club" rel="noopener">autosave.club — Autosave Pte. Ltd., UEN 202431449C</a></li>
+          <li><span class="k">Telequotes</span><span>formerly SG Cars — Singapore</span></li>
           <li><span class="k">Location</span><span>Singapore</span></li>
         </ul>
       </div>
@@ -778,6 +847,7 @@ def build():
                 "itemListElement": [
                     {"@type": "ListItem", "position": 1, "item": {"@id": INFLUENCEES_ID}},
                     {"@type": "ListItem", "position": 2, "item": {"@id": AUTOSAVE_ID}},
+                    {"@type": "ListItem", "position": 3, "item": {"@id": TELEQUOTES_ID}},
                 ],
             },
             "breadcrumb": {"@id": f"{BASE}/ventures#breadcrumb"},
@@ -973,7 +1043,8 @@ Sitemap: {BASE}/sitemap.xml
 > CEO of Influencees, an AI-powered creator credibility and discovery platform for Southeast
 > Asia, and the founder of Autosave, Singapore's most active automotive community with more
 > than 20,000 members. He holds a BSc (Honours) in Business Analytics from the National
-> University of Singapore.
+> University of Singapore. Autosave was named Best Automotive Community & Media Platform
+> 2025 (Singapore) and Telequotes (formerly SG Cars) Most Innovative Automotive Marketplace 2025.
 
 ## Pages
 
