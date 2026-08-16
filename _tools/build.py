@@ -22,7 +22,6 @@ PERSON_ID = f"{BASE}/#davidsonchua"
 SITE_ID = f"{BASE}/#website"
 INFLUENCEES_ID = "https://www.influencees.com/#organization"
 AUTOSAVE_ID = "https://www.autosave.club/#organization"
-TELEQUOTES_ID = f"{BASE}/#telequotes"
 
 SAME_AS = [
     "https://www.wikidata.org/wiki/Q141103594",
@@ -66,7 +65,7 @@ PERSON = {
     "nationality": {"@type": "Country", "name": "Singapore"},
     "homeLocation": {"@type": "Place", "address": {"@type": "PostalAddress", "addressCountry": "SG", "addressLocality": "Singapore"}},
     "worksFor": {"@id": INFLUENCEES_ID},
-    "founder": [{"@id": INFLUENCEES_ID}, {"@id": AUTOSAVE_ID}, {"@id": TELEQUOTES_ID}],
+    "founder": [{"@id": INFLUENCEES_ID}, {"@id": AUTOSAVE_ID}],
     "alumniOf": [
         {
             "@type": "CollegeOrUniversity",
@@ -170,29 +169,6 @@ AUTOSAVE = {
     ],
 }
 
-TELEQUOTES = {
-    "@type": "Organization",
-    "@id": TELEQUOTES_ID,
-    "name": "Telequotes",
-    "alternateName": "SG Cars",
-    "description": (
-        "Singapore automotive marketplace connecting private sellers with ready buyers and "
-        "dealers. Started as a Telegram marketplace under the name SG Cars."
-    ),
-    "foundingDate": "2024",
-    "founder": {"@id": PERSON_ID},
-    "address": {"@type": "PostalAddress", "addressCountry": "SG", "addressLocality": "Singapore"},
-    "award": "Most Innovative Automotive Marketplace 2025 (APAC Insider)",
-    "hasCredential": {
-        "@type": "EducationalOccupationalCredential",
-        "credentialCategory": "Award",
-        "name": "Most Innovative Automotive Marketplace 2025",
-        "recognizedBy": {"@type": "Organization", "name": "APAC Insider"},
-        "url": "https://apacinsider.digital/winners/sg-cars/",
-    },
-    "sameAs": ["https://apacinsider.digital/winners/sg-cars/"],
-}
-
 WEBSITE = {
     "@type": "WebSite",
     "@id": SITE_ID,
@@ -206,7 +182,7 @@ WEBSITE = {
     "about": {"@id": PERSON_ID},
 }
 
-CORE_GRAPH = [PERSON, INFLUENCEES, AUTOSAVE, TELEQUOTES, WEBSITE]
+CORE_GRAPH = [PERSON, INFLUENCEES, AUTOSAVE, WEBSITE]
 
 
 def breadcrumb(trail):
