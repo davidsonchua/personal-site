@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Davidson Chua — Writing</title>
+    <link>https://davidsonchua.cc/writing</link>
+    <atom:link href="https://davidsonchua.cc/writingfeed.xml" rel="self" type="application/rss+xml"/>
+    <description>Essays on the creator economy, community building and Singapore motoring.</description>
+    <language>en-SG</language>
+    <item>
+      <title>Follower count is a bad proxy for trust</title>
+      <link>https://davidsonchua.cc/writingfollower-count-is-a-bad-proxy-for-trust/</link>
+      <guid isPermaLink="true">https://davidsonchua.cc/writingfollower-count-is-a-bad-proxy-for-trust/</guid>
+      <description>Why the creator economy&#x27;s default metric measures the wrong thing, and what building a 20,000-member community taught Davidson Chua about credibility.</description>
+      <dc:creator>Davidson Chua</dc:creator>
+    </item>
+  </channel>
+</rss>

@@ -1,6 +1,10 @@
 {
   "name": "Davidson Chua",
   "short_name": "Davidson Chua",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -14,8 +18,5 @@
       "type": "image/png",
       "purpose": "maskable"
     }
-  ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "standalone"
+  ]
 }

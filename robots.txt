@@ -1,4 +1,21 @@
+# davidsonchua.cc
 User-agent: *
+Allow: /
+
+# AI crawlers are welcome — being cited in AI answers is a discovery channel.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://davidsonchua.cc/sitemap.xml

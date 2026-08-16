@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google Knowledge Panel Playbook — Davidson Chua</title>
+<style>
+:root{
+  --bg:#fbfbfc; --card:#fff; --text:#14161a; --muted:#5c6472; --faint:#8b93a1;
+  --hair:#e5e8ed; --hair2:#d3d8e0;
+  --p0:#0f172a; --p1:#166534; --p2:#854d0e; --p3:#3730a3; --warn:#9f1239;
+  --p0bg:#eef1f6; --p1bg:#e8f5ec; --p2bg:#fdf4e3; --p3bg:#ecebfa; --warnbg:#fdeaef;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);
+  font:16px/1.65 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:920px;margin:0 auto;padding:44px 22px 90px}
+h1{font-size:clamp(27px,4.4vw,38px);line-height:1.13;letter-spacing:-.7px;margin:0 0 12px;font-weight:770}
+h2{font-size:22px;letter-spacing:-.35px;margin:0 0 4px;font-weight:730}
+h3{font-size:16.5px;margin:26px 0 6px;font-weight:700}
+p{margin:0 0 14px}
+a{color:#1d4ed8}
+.sub{font-size:18px;color:var(--muted);margin:0 0 30px;max-width:70ch}
+
+.callout{border:1px solid var(--hair);border-left:3px solid var(--warn);background:var(--warnbg);
+  border-radius:10px;padding:16px 18px;margin:0 0 30px}
+.callout strong{color:var(--warn)}
+.callout p:last-child{margin-bottom:0}
+.callout.neutral{border-left-color:var(--p0);background:var(--p0bg)}
+.callout.neutral strong{color:var(--p0)}
+
+.phase{background:var(--card);border:1px solid var(--hair);border-radius:14px;
+  padding:24px 24px 8px;margin:0 0 22px}
+.phaseHead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.chip{font-size:11.5px;font-weight:750;letter-spacing:.06em;text-transform:uppercase;
+  padding:4px 10px;border-radius:999px;white-space:nowrap}
+.c0{background:var(--p0bg);color:var(--p0)} .c1{background:var(--p1bg);color:var(--p1)}
+.c2{background:var(--p2bg);color:var(--p2)} .c3{background:var(--p3bg);color:var(--p3)}
+.when{font-size:13px;color:var(--faint);margin-left:auto}
+.why{font-size:14.5px;color:var(--muted);margin:0 0 18px;padding-bottom:14px;border-bottom:1px solid var(--hair)}
+
+ol.steps{list-style:none;counter-reset:s;margin:0;padding:0}
+ol.steps>li{counter-increment:s;position:relative;padding:0 0 20px 40px;margin-bottom:20px;
+  border-bottom:1px solid var(--hair)}
+ol.steps>li:last-child{border-bottom:0}
+ol.steps>li::before{content:counter(s);position:absolute;left:0;top:1px;width:26px;height:26px;
+  border-radius:999px;background:var(--text);color:#fff;display:grid;place-items:center;
+  font-size:13px;font-weight:700}
+.stepTitle{font-weight:700;margin-bottom:4px;font-size:16px}
+ol.steps p{margin:0 0 10px;font-size:15px;color:var(--muted)}
+ol.steps ul{margin:8px 0 10px;padding-left:20px;font-size:14.5px;color:var(--muted)}
+ol.steps li li{margin-bottom:5px}
+.done{opacity:.62}
+.done .stepTitle::after{content:" ✓";color:var(--p1)}
+
+code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+code{background:#f1f3f7;border:1px solid var(--hair);border-radius:5px;padding:1px 5px;font-size:13px}
+pre{background:#14161a;color:#e8eaf0;border-radius:10px;padding:15px 17px;overflow-x:auto;
+  font-size:13px;line-height:1.6;margin:10px 0 14px}
+pre code{background:none;border:0;padding:0;color:inherit;font-size:13px}
+
+table{width:100%;border-collapse:collapse;margin:10px 0 16px;font-size:14px}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--hair);vertical-align:top}
+th{font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--faint);font-weight:750}
+td code{font-size:12.5px}
+
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;
+  background:var(--p1bg);color:var(--p1);white-space:nowrap}
+.pill.med{background:var(--p2bg);color:var(--p2)}
+.pill.low{background:var(--p0bg);color:var(--p0)}
+
+.dont{background:var(--card);border:1px solid var(--hair);border-radius:14px;padding:22px 24px}
+.dont ul{margin:0;padding-left:20px;color:var(--muted);font-size:15px}
+.dont li{margin-bottom:9px}
+.dont b{color:var(--text)}
+
+footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--hair);
+  color:var(--faint);font-size:13px}
+
+@media print{body{background:#fff}.phase{break-inside:avoid;box-shadow:none}}
+@media (max-width:620px){
+  .wrap{padding:30px 16px 60px}
+  ol.steps>li{padding-left:34px}
+  .when{margin-left:0;width:100%}
+  table{font-size:13px} th,td{padding:7px 8px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Google Knowledge Panel playbook</h1>
+<p class="sub">A prioritised, six-month plan to make <strong>davidsonchua.cc</strong> rank #1 for
+“Davidson Chua” and to give Google enough confidence to generate a person Knowledge Panel.
+Ordered by impact — do them in this order.</p>
+
+<div class="callout">
+  <p><strong>Read this first — the honest version.</strong> There is no application form for a
+  Knowledge Panel. Google generates them automatically when its Knowledge Graph is confident that
+  a distinct entity exists and that the web agrees on its core facts. Adding <code>Person</code>
+  schema does not create one — that's the single most common piece of SEO folklore. What creates
+  one is <em>consistency at volume</em>: one authoritative page about you (your new
+  <code>/about</code>), and many independent sources repeating the same name, title, company,
+  education and location, all pointing back at it.</p>
+  <p>Realistic timeline for a founder with no Wikipedia article: <strong>9–24 months</strong>, with
+  a real chance it never triggers. Ranking #1 for your own name is far more achievable —
+  expect that within weeks of deploying, and it's most of the practical benefit anyway.</p>
+</div>
+
+<!-- ================= PHASE 0 ================= -->
+<div class="phase">
+  <div class="phaseHead">
+    <span class="chip c0">Phase 0</span>
+    <h2>Already done — the site rebuild</h2>
+    <span class="when">Complete</span>
+  </div>
+  <p class="why">Your Entity Home now exists. This is the reference page Google uses to reconcile
+  contradictory information about you from elsewhere on the web.</p>
+  <ol class="steps">
+    <li class="done"><div class="stepTitle">Entity Home built at <code>/about</code></div>
+      <p>A ProfilePage with <code>mainEntity</code> pointing at your Person node — the exact
+      structure Google documents for author/person pages. It states who you are, what you do,
+      where you studied and where you're based, in plain prose a machine can parse.</p></li>
+    <li class="done"><div class="stepTitle">One identical entity graph on every page</div>
+      <p>Person, two Organizations and WebSite nodes, linked by stable <code>@id</code> URIs.
+      Your Person node carries <code>alternateName: "Davidson Chua Chee Chuan"</code>,
+      <code>disambiguatingDescription</code>, <code>knowsAbout</code>, <code>alumniOf</code>,
+      <code>hasCredential</code> and seven <code>sameAs</code> links.</p></li>
+    <li class="done"><div class="stepTitle">Five indexable pages instead of one</div>
+      <p>Home, About, Ventures, Writing, Media, Contact. More surface area competing for your name,
+      and Google can award sitelinks under your main result.</p></li>
+    <li class="done"><div class="stepTitle">Canonicals, OG/Twitter cards, sitemap, robots, RSS, llms.txt, 404</div>
+      <p>None of these existed before. Images cut from 3.4&nbsp;MB to ~0.4&nbsp;MB (WebP),
+      hero preloaded with <code>fetchpriority="high"</code>.</p></li>
+  </ol>
+</div>
+
+<!-- ================= PHASE 1 ================= -->
+<div class="phase">
+  <div class="phaseHead">
+    <span class="chip c1">Phase 1</span>
+    <h2>Deploy &amp; get indexed</h2>
+    <span class="when">Week 1 · ~90 minutes</span>
+  </div>
+  <p class="why">Nothing else matters until Google has crawled the new pages and settled on one
+  canonical hostname.</p>
+  <ol class="steps">
+
+    <li><div class="stepTitle">Fix the www / apex split <span class="pill">Critical</span></div>
+      <p>Right now <strong>both</strong> <code>davidsonchua.cc</code> and
+      <code>www.davidsonchua.cc</code> serve the identical page with no redirect between them. That
+      is textbook duplicate content — it splits your ranking signals across two hostnames, and it's
+      why Google indexed the www version while your own sitemap pointed at the apex.</p>
+      <p>I've made the <strong>apex</strong> (<code>davidsonchua.cc</code>) canonical everywhere —
+      it matches what your sitemap and robots.txt already used, and it's the shorter thing to say
+      out loud. In the Vercel dashboard → Project → Settings → Domains, set
+      <code>www.davidsonchua.cc</code> to <strong>Redirect to davidsonchua.cc</strong> (308).</p>
+      <p>Prefer www instead? It's one line — change <code>BASE</code> in
+      <code>_tools/build.py</code> and re-run the build.</p></li>
+
+    <li><div class="stepTitle">Fix the broken /about route <span class="pill">Critical</span></div>
+      <p><code>davidsonchua.cc/about</code> currently returns a <strong>404</strong>. Your
+      <code>vercel.json</code> rewrites <code>/about</code> → <code>/about.html</code>, but
+      <code>about.html</code> was deleted in a past commit and the rewrite was never removed. Google
+      has been hitting a dead URL that your own sitemap advertises.</p>
+      <p>The new <code>vercel.json</code> I've included drops that stale rewrite. The About page is
+      now a real file at <code>about/index.html</code>, which Vercel serves at
+      <code>/about</code> under your existing <code>cleanUrls</code> setting.</p></li>
+
+    <li><div class="stepTitle">Check email obfuscation if you're behind Cloudflare</div>
+      <p>You hit this before: Scrape Shield rewrites <code>mailto:</code> links into JavaScript, so
+      Google sees a broken email on your contact page. If Cloudflare sits in front of Vercel,
+      Dashboard → your domain → <strong>Scrape Shield</strong> → turn off
+      <em>Email Address Obfuscation</em>. If you're on Vercel DNS only, nothing to do.</p></li>
+
+    <li><div class="stepTitle">Verify in Google Search Console <span class="pill">Critical</span></div>
+      <p>Use <strong>domain property</strong> verification via DNS TXT record, not the URL-prefix
+      method — it covers both hostnames and every subdomain at once. This is also the single
+      verification channel Google accepts when you later claim the Knowledge Panel, so it's a
+      prerequisite twice over.</p>
+      <ul>
+        <li>Submit <code>https://davidsonchua.cc/sitemap.xml</code> under Sitemaps</li>
+        <li>Use URL Inspection → <em>Request indexing</em> on <code>/</code> and <code>/about</code></li>
+        <li>Do not use the sitemap ping URL — Google deprecated it in 2023</li>
+      </ul></li>
+
+    <li><div class="stepTitle">Validate the structured data</div>
+      <p>Paste each URL into the <a href="https://search.google.com/test/rich-results">Rich Results
+      Test</a> and <a href="https://validator.schema.org/">schema.org validator</a>. I've already
+      checked the JSON parses and that no <code>@id</code> reference dangles, but confirm against
+      the live pages after deploy.</p></li>
+
+    <li><div class="stepTitle">Add Bing Webmaster Tools <span class="pill med">Worth 10 min</span></div>
+      <p>Import directly from Search Console. Bing also powers ChatGPT search, so this is your
+      cheapest route into AI answers. Submit the sitemap and enable IndexNow while you're there
+      (Google doesn't support IndexNow — Bing, Yandex and several AI crawlers do).</p></li>
+
+  </ol>
+</div>
+
+<!-- ================= PHASE 2 ================= -->
+<div class="phase">
+  <div class="phaseHead">
+    <span class="chip c1">Phase 2</span>
+    <h2>The consistency sweep</h2>
+    <span class="when">Week 1–2 · ~2 hours · highest leverage off-site work</span>
+  </div>
+  <p class="why">This is the step people skip, and it's the one that decides whether a panel ever
+  appears. Inconsistency across your profiles doesn't just fail to help — it actively destroys
+  Google's confidence. Sparse-but-identical beats rich-but-contradictory every time.</p>
+  <ol class="steps">
+
+    <li><div class="stepTitle">Adopt one canonical bio and never deviate</div>
+      <p>Paste these exact strings everywhere. Same words, same order, same numbers.</p>
+      <p><strong>One line (for headlines and bylines):</strong></p>
+      <pre><code>Founder &amp; CEO of Influencees | Founder of Autosave | Singapore</code></pre>
+      <p><strong>Short (≈40 words — LinkedIn About, speaker bios, podcast notes):</strong></p>
+      <pre><code>Davidson Chua is the founder and CEO of Influencees, an AI-powered creator
+credibility and discovery platform for Southeast Asia, and the founder of
+Autosave, Singapore's most active automotive community with over 20,000
+members. He holds a BSc (Honours) in Business Analytics from NUS.</code></pre>
+      <p>Every bio must end with <code>https://davidsonchua.cc</code>. That backlink is what
+      closes the loop between each profile and your Entity Home.</p></li>
+
+    <li><div class="stepTitle">Fix every profile to match <span class="pill">Critical</span></div>
+      <p>Work down this table. The “website” field on each profile must point at
+      <code>https://davidsonchua.cc</code> — not to Influencees, not to Autosave.</p>
+      <table>
+        <thead><tr><th>Profile</th><th>What to change</th></tr></thead>
+        <tbody>
+          <tr><td><b>LinkedIn</b></td><td>Headline → canonical one-liner. About → short bio. Add website link. Ensure Influencees and Autosave are listed as <em>Founder</em> positions with matching dates (2026 / 2022).</td></tr>
+          <tr><td><b>Crunchbase</b></td><td>Bio → short bio. Verify the three orgs listed. Decide on Telequotes (see Phase&nbsp;2, step&nbsp;4).</td></tr>
+          <tr><td><b>X / @davidsonchua</b></td><td><span class="pill med">Confirm this is yours</span> Crunchbase lists this handle but I couldn't verify it. If it's yours: bio → one-liner, website → your site. If it isn't, tell me and I'll remove it from <code>sameAs</code> — pointing at someone else's account is worse than omitting it.</td></tr>
+          <tr><td><b>Medium</b></td><td>Bio still says “Started @Autosave…” — update to the short bio. It already links to your site; keep that.</td></tr>
+          <tr><td><b>Connectively (HARO)</b></td><td>Title says “Founder &amp; Editor @ Autosave” — update to the one-liner so your press-facing identity matches.</td></tr>
+          <tr><td><b>Instagram / Telegram</b></td><td>Same one-liner and site link in bio.</td></tr>
+          <tr><td><b>autosave.club</b></td><td>Says “20,000+ reached”; add a founder/about section naming you, with a link to davidsonchua.cc. A company site that names its founder is a strong corroboration source.</td></tr>
+          <tr><td><b>influencees.com</b></td><td>Add a team/about page naming you as Founder &amp; CEO and Edwin Koh as co-founder, linking to both personal sites.</td></tr>
+        </tbody>
+      </table></li>
+
+    <li><div class="stepTitle">Use one photograph everywhere <span class="pill med">Underrated</span></div>
+      <p>I switched your hero from the 2.2&nbsp;MB traced SVG to the real photograph — Knowledge
+      Panels show photographs of people, and the illustrated version can't serve that role. Use the
+      identical crop on LinkedIn, Crunchbase, X, Medium, speaker pages and conference bios. Google
+      matches faces across sources; one recurring image is a genuine entity signal, and it also
+      decides which photo a panel eventually shows.</p>
+      <p>Download it at <code>/assets/profile-800.webp</code> — also linked from your contact page.</p></li>
+
+    <li><div class="stepTitle">Decide on Telequotes</div>
+      <p>Your Crunchbase lists you as Co-Founder of Telequotes since Aug 2024, but it appears nowhere
+      else and has no website. Either add it to <code>/ventures</code> so your site matches
+      Crunchbase, or remove it from Crunchbase. An unexplained gap between your two most-crawled
+      profiles is exactly the kind of contradiction that suppresses confidence.</p></li>
+
+    <li><div class="stepTitle">Close the two verification gaps I found</div>
+      <p>Both of these are claims on your site that I could not corroborate anywhere else. They're
+      probably fine — but a rater or a journalist checking you out will hit the same wall I did.</p>
+      <ul>
+        <li><b>Straits Times features.</b> The <code>str.sg</code> short links and the three
+        <em>Work Talk</em> episode URLs are blocked to automated fetching, so I couldn't confirm they
+        resolve or that you're named in them. Open each one manually. If any 404s or doesn't name
+        you, replace it with a working link or drop it. If they're good, consider asking ST for the
+        canonical (non-shortened) URLs — short links pass less signal.</li>
+        <li><b>APAC Insider awards.</b> You mentioned the entry was under “SG Cars”. Find the
+        winners-list URL on <code>apacinsider.digital</code> and send it to me — I'll link it from
+        <code>/ventures</code>. An award that links to its source is a credential; one that doesn't
+        is an assertion, and Google's quality raters treat unsupported credentials as a negative.</li>
+      </ul></li>
+
+  </ol>
+</div>
+
+<!-- ================= PHASE 3 ================= -->
+<div class="phase">
+  <div class="phaseHead">
+    <span class="chip c2">Phase 3</span>
+    <h2>Wikidata</h2>
+    <span class="when">Month 1 · ~2 hours · highest-leverage single action</span>
+  </div>
+  <p class="why">Wikidata is the most machine-readable input into the Knowledge Graph, openly
+  licensed and heavily reused. It is not a switch that turns a panel on, but practitioners
+  consistently find it cuts the amount of other corroboration needed by roughly half.</p>
+  <ol class="steps">
+
+    <li><div class="stepTitle">Understand what qualifies you</div>
+      <p>You do <em>not</em> need a Wikipedia article. Wikidata notability has three routes and you
+      only need one. Yours is criterion&nbsp;2: a “clearly identifiable entity that can be described
+      using serious and publicly available references.” Your NUS Computing feature, Crunchbase
+      record, ACRA-registered company and press appearances are exactly that kind of reference.</p>
+      <p>Verify the current policy at
+      <a href="https://www.wikidata.org/wiki/Wikidata:Notability">Wikidata:Notability</a> before you
+      start — there's an open RFC that could tighten criterion&nbsp;2.</p></li>
+
+    <li><div class="stepTitle">Create the item correctly <span class="pill">Critical</span></div>
+      <p>Use a <strong>personal, non-branded account</strong>. Branded accounts and undisclosed
+      promotional editing get items deleted, and a <em>deleted</em> item is worse than no item — it
+      leaves a negative trail. Reference every single claim; unreferenced claims on a living person
+      are the number-one deletion trigger.</p>
+      <p>Minimum viable item:</p>
+      <table>
+        <thead><tr><th>Property</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>Label / Description</td><td>Davidson Chua / <em>Singaporean entrepreneur, founder of Influencees</em></td></tr>
+          <tr><td>instance of (P31)</td><td>human (Q5)</td></tr>
+          <tr><td>country of citizenship (P27)</td><td>Singapore</td></tr>
+          <tr><td>occupation (P106)</td><td>entrepreneur, businessperson</td></tr>
+          <tr><td>educated at (P69)</td><td>National University of Singapore; Singapore Polytechnic</td></tr>
+          <tr><td>official website (P856)</td><td><code>https://davidsonchua.cc</code></td></tr>
+          <tr><td>Crunchbase person ID (P2087)</td><td><code>davidson-chua-cc</code></td></tr>
+          <tr><td>LinkedIn personal profile ID (P6634)</td><td><code>davidsonchua</code></td></tr>
+          <tr><td>X username (P2002)</td><td><code>davidsonchua</code> <em>(only if confirmed)</em></td></tr>
+        </tbody>
+      </table>
+      <p>External identifiers are the real currency here — each one is an independent authority
+      record anchoring you as a unique entity.</p></li>
+
+    <li><div class="stepTitle">Create items for the companies too</div>
+      <p>Create <em>Influencees</em> and <em>Autosave Pte. Ltd.</em> as items, with
+      <code>founded by (P112)</code> pointing at your item and <code>country (P17)</code> Singapore.
+      Relationship density is how Google separates you from other people with your name — an
+      isolated node is easy to confuse, a connected subgraph isn't.</p></li>
+
+    <li><div class="stepTitle">Add <code>different from</code> (P1889)</div>
+      <p>If any other Davidson Chua has a Wikidata item, link yours to theirs with P1889 and give
+      both distinct descriptions. Explicit disambiguation is more effective than hoping volume
+      sorts it out.</p></li>
+
+    <li><div class="stepTitle">Then add the Q-ID to your site</div>
+      <p>Once the item is live and stable for a couple of weeks, send me the Q-ID. I'll add
+      <code>https://www.wikidata.org/wiki/Q…</code> to your <code>sameAs</code> array and as an
+      <code>identifier</code>. Schema.org names the Wikidata URI as the canonical example of an
+      unambiguous identity reference — it's the strongest single entry in that list.</p></li>
+
+  </ol>
+</div>
+
+<!-- ================= PHASE 4 ================= -->
+<div class="phase">
+  <div class="phaseHead">
+    <span class="chip c3">Phase 4</span>
+    <h2>Corroboration — the long game</h2>
+    <span class="when">Months 1–12 · ongoing</span>
+  </div>
+  <p class="why">The honest bottleneck. Right now the only substantive third-party editorial
+  coverage naming you is the NUS Computing feature. Practitioners estimate a person needs on the
+  order of 20–30 consistent independent sources; with Wikidata, closer to 6–10. Every item below
+  is one more.</p>
+  <ol class="steps">
+
+    <li><div class="stepTitle">Press — target the outlets that cover your beat <span class="pill">Highest impact</span></div>
+      <p>You are unusually pitchable: a founder with a real 20,000-member community, a live
+      product, and a contrarian thesis about follower counts. Nobody at these outlets has written
+      about you yet.</p>
+      <ul>
+        <li><b>e27</b>, <b>Tech in Asia</b>, <b>Vulcan Post</b> — SEA startup coverage. Pitch the
+        funding round and the credibility thesis.</li>
+        <li><b>The Business Times</b>, <b>CNA</b> — you already have an ST relationship; ask them
+        to refer you, or pitch the creator-economy angle directly.</li>
+        <li><b>Marketing-Interactive</b>, <b>Campaign Asia</b> — influencer-marketing trade press,
+        an easier first yes than general tech media.</li>
+        <li>Keep the <b>Connectively/HARO</b> profile active and answer queries on creator economy,
+        influencer marketing and Singapore automotive. Each answered query can become a named
+        citation with a backlink.</li>
+      </ul>
+      <p>When coverage lands, make sure they spell your name and title exactly as your canonical
+      bio does, and ask for a link to davidsonchua.cc rather than to Influencees.</p></li>
+
+    <li><div class="stepTitle">Get the NUS relationship working harder</div>
+      <p>NUS is a high-authority domain that already features you. Ask NUS Computing / NUS
+      Enterprise / BLOCK71 about alumni-profile pages, a VIP@SoC case study, or a mentor listing.
+      University pages are exactly the kind of independent, stable, authoritative corroboration
+      Google weights heavily — and they're free.</p></li>
+
+    <li><div class="stepTitle">Speaking, panels, podcasts</div>
+      <p>You already have ChargedUp 2026. Every speaker page is a corroborating source, so treat
+      the bio field as part of this system, not an afterthought: paste the canonical short bio,
+      the same photo, and the davidsonchua.cc link every time. Chase startup/creator-economy events
+      and podcasts — a podcast guest page is a cheap, permanent, linked citation.</p></li>
+
+    <li><div class="stepTitle">Publish on your own site, not only on Medium <span class="pill med">Compounds</span></div>
+      <p>I've set up <code>/writing</code> with proper <code>BlogPosting</code> schema and an author
+      link back to your Person node, plus a seeded first essay. Your Medium and Bay City Culture
+      writing builds Medium's authority; posts here build yours. Aim for one substantial piece a
+      month on the creator economy or Singapore motoring.</p>
+      <p>Cross-post to Medium <em>after</em> publishing here, with a canonical link back — you keep
+      the reach and the ranking signal.</p>
+      <p><b>Before you publish the seeded essay, read and edit it.</b> I wrote it from your
+      documented positions, but it goes out under your byline and should sound like you.</p></li>
+
+    <li><div class="stepTitle">Own the whole first page, not just one slot</div>
+      <p>Your real competition for “Davidson Chua” isn't another site — it's LinkedIn, Crunchbase,
+      Medium and Instagram outranking your own domain, plus the other people who share your name (a
+      SoundCloud musician, a YouTube channel, four LinkedIn profiles). You control most of those
+      properties. A first page where every result is yours is both a better outcome than one #1
+      result, and the state that most reliably precedes a panel.</p></li>
+
+  </ol>
+</div>
+
+<!-- ================= PHASE 5 ================= -->
+<div class="phase">
+  <div class="phaseHead">
+    <span class="chip c3">Phase 5</span>
+    <h2>Claim it</h2>
+    <span class="when">When the panel appears</span>
+  </div>
+  <ol class="steps">
+    <li><div class="stepTitle">Search your name in an incognito window, monthly</div>
+      <p>Look for a panel on the right (desktop) or above results (mobile). Set a monthly reminder —
+      I can schedule one if you'd like.</p></li>
+    <li><div class="stepTitle">Click “Claim this knowledge panel”</div>
+      <p>Verify by signing in to an official property. Search Console is the channel you fully
+      control, which is why Phase&nbsp;1 set it up. YouTube, X and Facebook also work.</p>
+      <p>You can't edit a panel directly even once verified — you <em>suggest</em> changes with
+      supporting evidence and Google reviews them. Note that Google states not all panels are
+      claimable.</p></li>
+    <li><div class="stepTitle">Expect volatility</div>
+      <p>Panels disappear. A conflicting new source, a profile going offline, or a confidence dip
+      can remove one. The fix is always the same: more consistent corroboration, not more markup.</p></li>
+  </ol>
+</div>
+
+<!-- ================= DON'T ================= -->
+<h3 style="margin-top:34px">Don't bother with these</h3>
+<div class="dont">
+  <ul>
+    <li><b>FAQ schema.</b> Dead — Google stopped showing FAQ rich results in May 2026 and removed
+    the documentation. Plenty of 2026 SEO blogs still recommend it.</li>
+    <li><b>A Google Business Profile for yourself.</b> That's a business listing system; it cannot
+    produce a person entity. One for Autosave is fine on its own merits.</li>
+    <li><b>Writing your own Wikipedia article.</b> Autobiography is a deletion magnet and the
+    notability bar (significant coverage in multiple genuinely independent sources) is one you don't
+    clear yet. Wikidata is the right door.</li>
+    <li><b>Chasing Core Web Vitals scores.</b> Thresholds are unchanged (LCP ≤2.5s, INP ≤200ms,
+    CLS ≤0.1) and your site now sails past them. Field data comes from real-user traffic, so a site
+    your size likely has none to be judged on. Ignore the “Core Web Vitals 2026 changed!” posts —
+    they're content farming.</li>
+    <li><b>The Google Indexing API.</b> Restricted to job postings and broadcast events. Using it
+    here does nothing.</li>
+    <li><b>Paying an agency for a “guaranteed” knowledge panel.</b> Nobody can guarantee one. Paid
+    Wikidata/Wikipedia editing and fabricated credentials get detected and set you backwards.</li>
+    <li><b>Sitemap <code>priority</code> and <code>changefreq</code>.</b> Google ignores both.</li>
+  </ul>
+</div>
+
+<h3>How to tell it's working</h3>
+<table>
+  <thead><tr><th>Signal</th><th>Where</th><th>Expect by</th></tr></thead>
+  <tbody>
+    <tr><td>All 7 pages indexed</td><td>Search Console → Pages</td><td>1–2 weeks</td></tr>
+    <tr><td>#1 for “Davidson Chua Singapore”</td><td>Incognito search</td><td>2–6 weeks</td></tr>
+    <tr><td>Sitelinks under your main result</td><td>Incognito search</td><td>1–3 months</td></tr>
+    <tr><td>#1 for bare “Davidson Chua”</td><td>Incognito search</td><td>2–6 months</td></tr>
+    <tr><td>Your site cited in AI Overviews / ChatGPT for your name</td><td>Ask an AI “who is Davidson Chua”</td><td>2–6 months</td></tr>
+    <tr><td>Knowledge Panel appears</td><td>Incognito search</td><td>9–24 months, not guaranteed</td></tr>
+  </tbody>
+</table>
+
+<footer>
+  Prepared 16 August 2026. Sources: Google Search Central documentation, Google Knowledge Panel
+  help, schema.org, Wikidata notability policy, and Kalicube's person-panel research. Where
+  practitioner claims aren't confirmed by Google, that's noted in the text.
+</footer>
+
+</div>
+</body>
+</html>
