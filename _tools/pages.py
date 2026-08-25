@@ -18,7 +18,7 @@ HOME_BODY = """
 
         <h1>Davidson Chua</h1>
         <p class="lead">
-          I'm a Singapore-based founder and community builder. I'm the founder and CEO of
+          I'm a Singapore-based founder and community builder. I'm the co-founder and CEO of
           <a href="https://www.influencees.com" rel="noopener">Influencees</a>, the creator
           credibility and discovery platform for Southeast Asia, and the founder of
           <a href="https://www.autosave.club" rel="noopener">Autosave</a>, Singapore's most
@@ -26,7 +26,7 @@ HOME_BODY = """
         </p>
 
         <ul class="heroFacts">
-          <li>Founder &amp; CEO, Influencees</li>
+          <li>Co-founder &amp; CEO, Influencees</li>
           <li>Founder, Autosave</li>
           <li>NUS Business Analytics</li>
           <li>Singapore</li>
@@ -61,7 +61,7 @@ HOME_BODY = """
           <a class="card" href="https://www.influencees.com" rel="noopener">
             <div class="cardTop">
               <span class="cardName">Influencees</span>
-              <span class="tag">Founder &amp; CEO · 2026</span>
+              <span class="tag">Co-founder &amp; CEO · 2026</span>
             </div>
             <p>An AI-powered creator credibility and discovery platform for Southeast Asia.
               Influencees syncs data directly from Instagram and TikTok so brands can judge
@@ -94,7 +94,7 @@ HOME_BODY = """
         <ul class="tl">
           <li>
             <span class="tlWhen">2026 —</span>
-            <div class="tlWhat"><strong>Founder &amp; CEO, Influencees</strong>
+            <div class="tlWhat"><strong>Co-founder &amp; CEO, Influencees</strong>
               <p>Co-founded with Edwin Koh out of the NUS Venture Initiation Programme. Raised a
                 six-figure round to build the trust layer for the creator economy.</p></div>
           </li>
@@ -145,7 +145,7 @@ ABOUT_BODY = """
         <p class="eyebrow">About</p>
         <h1>About Davidson Chua</h1>
         <p class="lead">
-          Davidson Chua is a Singapore-based founder and community builder. He is the founder
+          Davidson Chua is a Singapore-based founder and community builder. He is the co-founder
           and CEO of Influencees, an AI-powered creator credibility and discovery platform for
           Southeast Asia, and the founder of Autosave, Singapore's most active automotive
           community with more than 20,000 members.
@@ -153,7 +153,7 @@ ABOUT_BODY = """
 
         <div class="portrait" style="margin:26px 0">
           <img src="/assets/profile-400.webp" width="132" height="132"
-               alt="Davidson Chua, founder and CEO of Influencees">
+               alt="Davidson Chua, co-founder and CEO of Influencees">
         </div>
       </div>
     </section>
@@ -225,7 +225,7 @@ ABOUT_BODY = """
         <h2>Quick facts</h2>
         <dl class="qa">
           <dt>Who is Davidson Chua?</dt>
-          <dd>Davidson Chua is a Singapore-based entrepreneur and community builder, founder and
+          <dd>Davidson Chua is a Singapore-based entrepreneur and community builder, co-founder and
             CEO of Influencees and founder of Autosave.</dd>
 
           <dt>What does Davidson Chua do?</dt>
@@ -303,7 +303,7 @@ VENTURES_BODY = """
     <section class="section">
       <div class="shell">
         <h2>Influencees</h2>
-        <p class="muted small">Founder &amp; CEO · Founded 2026 · Singapore ·
+        <p class="muted small">Co-founder &amp; CEO · Founded 2026 · Singapore ·
           <a href="https://www.influencees.com" rel="noopener">influencees.com</a></p>
 
         <p>Influencees is an AI-powered creator credibility and discovery platform for Southeast
@@ -550,7 +550,7 @@ CONTACT_BODY = """
           <a href="https://www.helpareporter.com/journalist/davidsonchua" rel="noopener">Connectively (formerly HARO)</a>.</p>
 
         <h3>Short bio (for use in articles)</h3>
-        <p class="muted">Davidson Chua is the founder and CEO of Influencees, an AI-powered creator
+        <p class="muted">Davidson Chua is the co-founder and CEO of Influencees, an AI-powered creator
           credibility and discovery platform for Southeast Asia, and the founder of Autosave,
           Singapore's most active automotive community with over 20,000 members. He holds a BSc
           (Honours) in Business Analytics from the National University of Singapore.</p>
@@ -733,7 +733,7 @@ def post_body(p):
                alt="Davidson Chua">
           <div>
             <strong>Davidson Chua</strong>
-            <p>Founder &amp; CEO of <a href="https://www.influencees.com" rel="noopener">Influencees</a>
+            <p>Co-founder &amp; CEO of <a href="https://www.influencees.com" rel="noopener">Influencees</a>
               and founder of <a href="https://www.autosave.club" rel="noopener">Autosave</a>, based in
               Singapore. <a href="/about">More about me →</a></p>
           </div>
@@ -767,8 +767,8 @@ def build():
     # ---- Home
     write("/", page(
         path="/",
-        title="Davidson Chua — Founder of Influencees & Autosave | Singapore",
-        desc=("Davidson Chua is a Singapore-based founder and community builder. Founder & CEO of "
+        title="Davidson Chua — Influencees Co-founder & CEO, Autosave Founder",
+        desc=("Davidson Chua is a Singapore-based founder and community builder. Co-founder & CEO of "
               "Influencees, the creator credibility platform for Southeast Asia, and founder of "
               "Autosave, Singapore's most active automotive community (20,000+ members)."),
         body=HOME_BODY,
@@ -777,7 +777,7 @@ def build():
             "@type": "WebPage",
             "@id": f"{BASE}/#webpage",
             "url": f"{BASE}/",
-            "name": "Davidson Chua — Founder of Influencees & Autosave",
+            "name": "Davidson Chua — Co-founder & CEO of Influencees, Founder of Autosave",
             "isPartOf": {"@id": SITE_ID},
             "about": {"@id": PERSON_ID},
             "primaryImageOfPage": {"@id": f"{BASE}/#primaryimage"},
@@ -790,8 +790,8 @@ def build():
     # ---- About (Entity Home: ProfilePage)
     write("/about", page(
         path="/about",
-        title="About Davidson Chua — Singapore Founder, Influencees & Autosave",
-        desc=("Full biography of Davidson Chua: Singapore-based founder and CEO of Influencees, "
+        title="About Davidson Chua — Co-founder & CEO of Influencees",
+        desc=("Full biography of Davidson Chua: Singapore-based co-founder and CEO of Influencees, "
               "founder of Autosave, NUS Business Analytics graduate. Career, ventures, education "
               "and verified profiles."),
         body=ABOUT_BODY,
@@ -1034,7 +1034,7 @@ Sitemap: {BASE}/sitemap.xml
         f.write(f"""# Davidson Chua
 
 > Davidson Chua is a Singapore-based founder and community builder. He is the founder and
-> CEO of Influencees, an AI-powered creator credibility and discovery platform for Southeast
+> co-founder and CEO of Influencees, an AI-powered creator credibility and discovery platform for Southeast
 > Asia, and the founder of Autosave, Singapore's most active automotive community with more
 > than 20,000 members. He holds a BSc (Honours) in Business Analytics from the National
 > University of Singapore. Autosave was named Best Automotive Community & Media Platform

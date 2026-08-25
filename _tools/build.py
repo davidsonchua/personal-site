@@ -51,10 +51,10 @@ PERSON = {
         "height": 800,
         "caption": "Davidson Chua, founder of Influencees and Autosave, Singapore",
     },
-    "jobTitle": ["Founder & CEO, Influencees", "Founder, Autosave"],
+    "jobTitle": ["Co-founder & CEO, Influencees", "Founder, Autosave"],
     "description": (
         "Davidson Chua is a Singapore-based founder and community builder. He is the "
-        "founder and CEO of Influencees, an AI-powered creator credibility and discovery "
+        "co-founder and CEO of Influencees, an AI-powered creator credibility and discovery "
         "platform for Southeast Asia, and the founder of Autosave, Singapore's most active "
         "automotive community."
     ),
@@ -263,7 +263,7 @@ def head(*, title, desc, path, og_type="website", og_image=None, extra_head=""):
   <meta property="og:image" content="{img}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Davidson Chua — Founder of Influencees and Autosave, Singapore">
+  <meta property="og:image:alt" content="Davidson Chua — Co-founder and CEO of Influencees, Founder of Autosave">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{html.escape(title)}">
@@ -319,7 +319,7 @@ def page(*, path, title, desc, body, graph_extra=None, og_type="website",
       <div class="footGrid">
         <div>
           <div class="footName">Davidson Chua</div>
-          <p class="footBio">Singapore-based founder and community builder. Founder &amp; CEO of
+          <p class="footBio">Singapore-based founder and community builder. Co-founder &amp; CEO of
             <a href="https://www.influencees.com" rel="noopener">Influencees</a>; founder of
             <a href="https://www.autosave.club" rel="noopener">Autosave</a>.</p>
         </div>
