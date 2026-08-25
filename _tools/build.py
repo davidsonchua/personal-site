@@ -10,7 +10,7 @@ import json, os, shutil, datetime, html, re
 
 BASE = "https://davidsonchua.cc"
 OUT = "site"
-TODAY = "2026-08-16"
+TODAY = "2026-08-25"
 
 # ---------------------------------------------------------------------------
 # ENTITY GRAPH  — the single most important block on the site.
@@ -104,6 +104,26 @@ PERSON = {
         "Brand partnerships",
     ],
     "knowsLanguage": [{"@type": "Language", "name": "English"}],
+    "subjectOf": [
+        {
+            "@type": "NewsArticle",
+            "@id": "https://technode.global/2026/08/24/influencees-davidson-chua-on-measuring-creator-influence-beyond-follower-count-qa/#article",
+            "headline": "Influencees' Davidson Chua on measuring creator influence beyond follower count [Q&A]",
+            "url": "https://technode.global/2026/08/24/influencees-davidson-chua-on-measuring-creator-influence-beyond-follower-count-qa/",
+            "datePublished": "2026-08-24",
+            "author": {"@type": "Person", "name": "J. Angelo Racoma"},
+            "publisher": {"@type": "Organization", "name": "TNGlobal", "url": "https://technode.global/"},
+            "about": {"@id": PERSON_ID},
+        },
+        {
+            "@type": "Article",
+            "@id": "https://www.comp.nus.edu.sg/news/how-influencees-is-building-the-ai-layer-for-the-creator-economy/#article",
+            "headline": "An NUS Computing Alumnus Developing an AI Tool That's Rethinking How Brands Find Creators",
+            "url": "https://www.comp.nus.edu.sg/news/how-influencees-is-building-the-ai-layer-for-the-creator-economy/",
+            "publisher": {"@type": "Organization", "name": "NUS School of Computing", "url": "https://www.comp.nus.edu.sg/"},
+            "about": {"@id": PERSON_ID},
+        },
+    ],
     "email": "mailto:davidsonchua@outlook.com",
     "identifier": [
         {"@type": "PropertyValue", "propertyID": "Wikidata", "value": "Q141103594",

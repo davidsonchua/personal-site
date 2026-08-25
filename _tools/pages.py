@@ -126,9 +126,10 @@ HOME_BODY = """
       <div class="shell">
         <p class="eyebrow">In the press</p>
         <h2>Selected media</h2>
-        <p class="muted">Featured in The Straits Times on Singapore's tech ambitions, and a guest on
-          three episodes of the ST <em>Work Talk</em> podcast covering tech careers, hiring and
-          generative AI. Speaker at ChargedUp 2026, Singapore's largest EV conference.</p>
+        <p class="muted">Interviewed by <a href="https://technode.global/2026/08/24/influencees-davidson-chua-on-measuring-creator-influence-beyond-follower-count-qa/" rel="noopener">TNGlobal</a> on measuring
+          creator influence beyond follower count, profiled by NUS Computing, featured in
+          The Straits Times on Singapore's tech ambitions, and a guest on three episodes of the ST
+          <em>Work Talk</em> podcast. Speaker at ChargedUp 2026, Singapore's largest EV conference.</p>
         <p class="small"><a href="/media">See all media features →</a></p>
       </div>
     </section>
@@ -204,6 +205,12 @@ ABOUT_BODY = """
         <blockquote>Influencees is about giving brands a better way to discover creators, while
           giving creators more opportunities to be seen.</blockquote>
 
+        <p>I went into this in more depth in a
+          <a href="https://technode.global/2026/08/24/influencees-davidson-chua-on-measuring-creator-influence-beyond-follower-count-qa/" rel="noopener">Q&amp;A with TNGlobal</a>: follower count is useful as a rough
+          indicator of reach, but it should rarely be the first or only signal anyone decides on.
+          A high engagement rate alone doesn't fix it either — on a small audience base, a few dozen
+          interactions produce a flattering percentage that means very little.</p>
+
         <h2>What I care about</h2>
         <p>Communities, and the infrastructure that makes them trustworthy. Almost everything I've
           built comes back to the same question: how do you know who to believe? In a car community
@@ -246,6 +253,12 @@ ABOUT_BODY = """
             <a href="https://www.corporatevision-news.com/winners/sg-cars/" rel="noopener">Best Automotive
             Community &amp; Media Platform 2025 &mdash; Singapore</a> in Corporate Vision's Automotive
             Awards.</dd>
+
+          <dt>Where has Davidson Chua been interviewed?</dt>
+          <dd>Most recently in a <a href="https://technode.global/2026/08/24/influencees-davidson-chua-on-measuring-creator-influence-beyond-follower-count-qa/" rel="noopener">TNGlobal Q&amp;A</a> on measuring creator
+            influence beyond follower count (August 2026). He has also been profiled by
+            <a href="https://www.comp.nus.edu.sg/news/how-influencees-is-building-the-ai-layer-for-the-creator-economy/" rel="noopener">NUS
+            Computing</a> and featured in The Straits Times. See the <a href="/media">media page</a>.</dd>
 
           <dt>How can I contact Davidson Chua?</dt>
           <dd>By <a href="mailto:davidsonchua@outlook.com">email</a>,
@@ -301,7 +314,7 @@ VENTURES_BODY = """
         <h3>What's in it</h3>
         <ul>
           <li><strong>Verified creator index</strong> — 1,200+ creators with engagement figures pulled from source, not screenshots.</li>
-          <li><strong>Trust Check</strong> — a credibility assessment for individual creators.</li>
+          <li><strong>Trust Check</strong> — credibility checks on creators, including detection of AI-generated video.</li>
           <li><strong>Ai-kyo</strong> — an AI assistant for campaign insight and content ideation.</li>
           <li><strong>Campaign workspace</strong> — brief, shortlist, brief and track collaborations in one place.</li>
           <li><strong>Creator Pro</strong> — a dashboard letting creators surface their real performance to brands.</li>
@@ -310,7 +323,8 @@ VENTURES_BODY = """
         <h3>Story</h3>
         <p>Co-founded with <strong>Edwin Koh</strong>, whom I first met through the NUS Venture
           Initiation Programme (VIP@SoC) as a mentor. We've raised a six-figure round. Influencees
-          also runs the <strong>Creator Creates Series</strong>, a creator hackathon.</p>
+          also runs the <strong>Creator Creates Series</strong>, a creator hackathon — the 2026
+          edition ran 19 creators, drew 1,700+ community votes and tracked 2,300+ link clicks.</p>
 
         <p><a class="btn ghost" href="https://www.influencees.com" rel="noopener">Visit Influencees</a></p>
       </div>
@@ -383,14 +397,33 @@ MEDIA_BODY = """
       <div class="shell">
         <p class="eyebrow">Media</p>
         <h1>Davidson Chua in the press</h1>
-        <p class="lead">Features, podcast appearances and speaking engagements. If you're a
-          journalist looking for comment on the creator economy, community building or Singapore's
-          automotive market, <a href="/contact">get in touch</a>.</p>
+        <p class="lead">Interviews, features, podcast appearances and speaking engagements. If
+          you're a journalist looking for comment on the creator economy, community building or
+          Singapore's automotive market, <a href="/contact">get in touch</a>.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="shell">
+
+        <article class="mediaItem">
+          <div class="mediaMeta"><span class="outlet">TNGlobal</span><span class="tag">Q&amp;A interview</span></div>
+          <h3>Influencees' Davidson Chua on measuring creator influence beyond follower count</h3>
+          <p class="muted">A long-form Q&amp;A with TNGlobal on why follower count is a weak decision
+            signal, how attribution breaks down between consideration and conversion, and what
+            creator verification should actually check. Interview by J. Angelo Racoma,
+            24&nbsp;August&nbsp;2026.</p>
+          <blockquote style="margin:14px 0;padding-left:18px;border-left:2px solid var(--hair2);color:var(--muted);font-style:italic">
+            "Follower count is useful as a rough indicator of potential reach, but it should rarely
+            be the first or only decision-making signal."
+          </blockquote>
+          <p class="small"><a href="https://technode.global/2026/08/24/influencees-davidson-chua-on-measuring-creator-influence-beyond-follower-count-qa/" rel="noopener">Read the full Q&amp;A</a></p>
+          <figure>
+            <img src="/assets/media/tnglobal-qa.webp" width="1000" height="1051" loading="lazy" decoding="async"
+                 alt="TNGlobal Q&amp;A with Davidson Chua of Influencees on measuring creator influence beyond follower count">
+          </figure>
+          <p class="credit">Image credit: TNGlobal</p>
+        </article>
 
         <article class="mediaItem">
           <div class="mediaMeta"><span class="outlet">The Straits Times</span><span class="tag">Feature</span></div>
@@ -1014,6 +1047,11 @@ Sitemap: {BASE}/sitemap.xml
 - [Writing]({BASE}/writing): Essays on the creator economy and Singapore motoring.
 - [Media]({BASE}/media): Press features, podcasts and speaking.
 - [Contact]({BASE}/contact): Email, social profiles, press bio and headshot.
+
+## Selected coverage
+
+- TNGlobal Q&A, 24 August 2026: "Influencees' Davidson Chua on measuring creator influence beyond follower count" — https://technode.global/2026/08/24/influencees-davidson-chua-on-measuring-creator-influence-beyond-follower-count-qa/
+- NUS Computing profile: https://www.comp.nus.edu.sg/news/how-influencees-is-building-the-ai-layer-for-the-creator-economy/
 
 ## Verified profiles
 
