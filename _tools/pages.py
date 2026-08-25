@@ -427,11 +427,12 @@ MEDIA_BODY = """
 
         <article class="mediaItem">
           <div class="mediaMeta"><span class="outlet">The Straits Times</span><span class="tag">Feature</span></div>
-          <h3>Singapore's tech ambitions</h3>
-          <p class="muted">Contributed perspective alongside industry experts in a Straits Times
-            feature on where Singapore's technology sector is heading.</p>
-          <p class="small"><a href="https://str.sg/wVR6" rel="noopener">str.sg/wVR6</a> ·
-            <a href="https://str.sg/wVR2" rel="noopener">str.sg/wVR2</a></p>
+          <h3>Singapore ranks as world's 12th tech city, with room to grow</h3>
+          <p class="muted">Featured in an SPH Media / Straits Times report on Singapore's rise as a
+            technology hub and the generation entering its tech workforce (October 2022). The
+            article is republished by the Singapore Economic Development Board.</p>
+          <p class="small"><a href="https://www.edb.gov.sg/en/business-insights/insights/singapore-ranks-as-world-s-12th-tech-city-with-room-to-grow-as-tech-savvy-generation-enter-job-market.html" rel="noopener">Read via Singapore EDB</a> ·
+            <a href="https://www.ntu.edu.sg/business/news-events/news/story-detail/singapore-ranks-as-world-s-12th-tech-city-with-room-to-grow-as-tech-savvy-generation-enter-job-market" rel="noopener">via NTU Nanyang Business School</a></p>
           <figure>
             <img src="/assets/media/straits-times-feature.webp" width="1000" height="1164" loading="lazy" decoding="async"
                  alt="The Straits Times feature quoting Davidson Chua on Singapore's tech ambitions">
@@ -443,7 +444,7 @@ MEDIA_BODY = """
           <div class="mediaMeta"><span class="outlet">ST Work Talk podcast</span><span class="tag">Guest</span></div>
           <h3>Singapore's rise as a tech city — and what it means for Singaporeans</h3>
           <p class="muted">On what the country's technology growth actually means for people
-            entering the workforce.</p>
+            entering the workforce. December 2022.</p>
           <p class="small"><a href="https://www.straitstimes.com/business/work-talk-podcast-singapore-s-rise-as-a-tech-city-and-what-it-means-for-singaporeans" rel="noopener">Listen to the episode</a></p>
           <figure>
             <img src="/assets/media/podcast-tech-city.webp" width="860" height="573" loading="lazy" decoding="async"
@@ -454,9 +455,9 @@ MEDIA_BODY = """
 
         <article class="mediaItem">
           <div class="mediaMeta"><span class="outlet">ST Work Talk podcast</span><span class="tag">Guest</span></div>
-          <h3>Where the tech jobs are</h3>
-          <p class="muted">A conversation on where technology roles are genuinely being created,
-            and how graduates can navigate an increasingly competitive market.</p>
+          <h3>Understanding tech culture at Salesforce and Cisco</h3>
+          <p class="muted">In conversation with Salesforce's regional CTO for solutions and Cisco's
+            regional cybersecurity leader on tech culture and where the jobs are.</p>
           <p class="small"><a href="https://www.straitstimes.com/business/work-talk-podcast-where-the-tech-jobs-are" rel="noopener">Listen to the episode</a></p>
           <figure>
             <img src="/assets/media/podcast-tech-jobs.webp" width="860" height="573" loading="lazy" decoding="async"
@@ -467,9 +468,9 @@ MEDIA_BODY = """
 
         <article class="mediaItem">
           <div class="mediaMeta"><span class="outlet">The Straits Times</span><span class="tag">Guest</span></div>
-          <h3>Gen AI: you started work yet?</h3>
+          <h3>Gen AI, you started work yet?</h3>
           <p class="muted">On beginning a career in a world shaped by tools like ChatGPT, and how
-            expectations are shifting for young professionals.</p>
+            expectations are shifting for young professionals. May 2024.</p>
           <p class="small"><a href="https://www.straitstimes.com/business/gen-ai-you-started-work-yet" rel="noopener">Listen to the episode</a></p>
           <figure>
             <img src="/assets/media/podcast-gen-ai.webp" width="860" height="573" loading="lazy" decoding="async"
