@@ -153,6 +153,26 @@ PERSON = {
             "about": {"@id": PERSON_ID},
         },
     ],
+    "performerIn": [
+        {
+            "@type": "Event",
+            "name": "Sgcarmart Beyond Motion 2026",
+            "description": "Panellist (Founder, Autosave) at Sgcarmart's mobility conference on the future of mobility, electrification and ownership in Singapore.",
+            "startDate": "2026-03-22",
+            "url": "https://www.sgcarmart.com/campaign/beyond-motion",
+            "organizer": {"@type": "Organization", "name": "Sgcarmart", "url": "https://www.sgcarmart.com/"},
+            "location": {"@type": "Place", "address": {"@type": "PostalAddress", "addressCountry": "SG", "addressLocality": "Singapore"}},
+        },
+        {
+            "@type": "Event",
+            "name": "ChargedUp 2026",
+            "description": "Panellist: Standards, Experience & Adoption — Building an Interoperable EV Journey Across Southeast Asia.",
+            "startDate": "2026-07-23",
+            "url": "https://www.chargedup.asia/",
+            "organizer": {"@type": "Organization", "name": "ChargedUp Asia", "url": "https://www.chargedup.asia/"},
+            "location": {"@type": "Place", "name": "Perennial Business City", "address": {"@type": "PostalAddress", "addressCountry": "SG", "addressLocality": "Singapore"}},
+        },
+    ],
     "email": "mailto:davidsonchua@outlook.com",
     "identifier": [
         {"@type": "PropertyValue", "propertyID": "Wikidata", "value": "Q141103594",

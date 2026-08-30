@@ -129,7 +129,7 @@ HOME_BODY = """
         <p class="muted">Interviewed by <a href="https://technode.global/2026/08/24/influencees-davidson-chua-on-measuring-creator-influence-beyond-follower-count-qa/" rel="noopener">TNGlobal</a> on measuring
           creator influence beyond follower count, profiled by NUS Computing, featured in
           The Straits Times on Singapore's tech ambitions, and a guest on three episodes of the ST
-          <em>Work Talk</em> podcast. Speaker at ChargedUp 2026, Singapore's largest EV conference.</p>
+          <em>Work Talk</em> podcast. Panellist at ChargedUp 2026, Singapore's largest EV conference, and at Sgcarmart's Beyond Motion 2026.</p>
         <p class="small"><a href="/media">See all media features →</a></p>
       </div>
     </section>
@@ -513,6 +513,15 @@ MEDIA_BODY = """
                  alt="Corporate Vision Automotive Awards 2025 winners page for SG Cars, Best Automotive Community and Media Platform 2025 Singapore">
           </figure>
           <p class="credit">Image credit: Corporate Vision</p>
+        </article>
+
+        <article class="mediaItem">
+          <div class="mediaMeta"><span class="outlet">Sgcarmart Beyond Motion 2026</span><span class="tag">Speaker</span></div>
+          <h3>Panellist — the future of mobility in Singapore</h3>
+          <p class="muted">Panellist (Founder, Autosave) at Sgcarmart's Beyond Motion conference on
+            mobility, electrification and ownership, alongside speakers from Allianz, NUS, Durapower,
+            Voltality and VINCAR Group. 22 March 2026.</p>
+          <p class="small"><a href="https://www.sgcarmart.com/campaign/beyond-motion" rel="noopener">See the speaker line-up</a></p>
         </article>
 
         <article class="mediaItem">
