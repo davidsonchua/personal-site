@@ -137,6 +137,15 @@ PERSON = {
         },
         {
             "@type": "Article",
+            "@id": "https://block71.co/heres-what-founders-are-talking-about-on-social-this-month/#article",
+            "headline": "Here's What Founders are Talking About on Social This Month",
+            "url": "https://block71.co/heres-what-founders-are-talking-about-on-social-this-month/",
+            "datePublished": "2026-06-23",
+            "publisher": {"@type": "Organization", "name": "BLOCK71 Global", "url": "https://block71.co/"},
+            "mentions": [{"@id": PERSON_ID}, {"@id": AUTOSAVE_ID}],
+        },
+        {
+            "@type": "Article",
             "@id": "https://www.comp.nus.edu.sg/news/how-influencees-is-building-the-ai-layer-for-the-creator-economy/#article",
             "headline": "An NUS Computing Alumnus Developing an AI Tool That's Rethinking How Brands Find Creators",
             "url": "https://www.comp.nus.edu.sg/news/how-influencees-is-building-the-ai-layer-for-the-creator-economy/",
@@ -206,6 +215,7 @@ AUTOSAVE = {
     "sameAs": [
         "https://www.instagram.com/baycityculture",
         "https://www.corporatevision-news.com/winners/sg-cars/",
+        "https://pitchbook.com/profiles/company/1366685-47",
     ],
 }
 

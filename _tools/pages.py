@@ -426,6 +426,16 @@ MEDIA_BODY = """
         </article>
 
         <article class="mediaItem">
+          <div class="mediaMeta"><span class="outlet">BLOCK71 · NUS Enterprise</span><span class="tag">Feature</span></div>
+          <h3>Here's what founders are talking about on social this month</h3>
+          <p class="muted">BLOCK71 Global features Autosave as a case study on building inside chat
+            apps and applying AI to real bottlenecks rather than flashy features, quoting Davidson
+            Chua: "Don't automate for the sake of tech. Start with your biggest bottleneck, not the
+            thing with the most wow factor." June 2026.</p>
+          <p class="small"><a href="https://block71.co/heres-what-founders-are-talking-about-on-social-this-month/" rel="noopener">Read the article</a></p>
+        </article>
+
+        <article class="mediaItem">
           <div class="mediaMeta"><span class="outlet">The Straits Times</span><span class="tag">Feature</span></div>
           <h3>Singapore ranks as world's 12th tech city, with room to grow</h3>
           <p class="muted">Featured in an SPH Media / Straits Times report on Singapore's rise as a
@@ -1053,6 +1063,7 @@ Sitemap: {BASE}/sitemap.xml
 
 - TNGlobal Q&A, 24 August 2026: "Influencees' Davidson Chua on measuring creator influence beyond follower count" — https://technode.global/2026/08/24/influencees-davidson-chua-on-measuring-creator-influence-beyond-follower-count-qa/
 - NUS Computing profile: https://www.comp.nus.edu.sg/news/how-influencees-is-building-the-ai-layer-for-the-creator-economy/
+- BLOCK71 Global feature on Autosave, 23 June 2026: https://block71.co/heres-what-founders-are-talking-about-on-social-this-month/
 
 ## Verified profiles
 
