@@ -420,8 +420,8 @@ MEDIA_BODY = """
             corporate venture investor. By Peter Cowan, 31&nbsp;August&nbsp;2026.</p>
           <p class="small"><a href="https://www.techinasia.com/meet-ai-platform-helps-brands-evaluate-content-creators" rel="noopener">Read the feature</a></p>
           <figure>
-            <img src="/assets/media/techinasia-spotlight.webp" width="540" height="515" loading="lazy" decoding="async"
-                 alt="Tech in Asia Startup Spotlight on Influencees, featuring co-founders Davidson Chua and Edwin Koh">
+            <img src="/assets/media/techinasia-spotlight.webp" width="1000" height="1047" loading="lazy" decoding="async"
+                 alt="Tech in Asia Startup Spotlight article on Influencees by Peter Cowan, with co-founders Davidson Chua and Edwin Koh">
           </figure>
           <p class="credit">Image credit: Tech in Asia</p>
         </article>
