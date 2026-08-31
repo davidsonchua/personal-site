@@ -44,7 +44,7 @@ HOME_BODY = """
         <p class="eyebrow">By the numbers</p>
         <h2>What I've built</h2>
         <ul class="stats">
-          <li><span class="statNum">20,000+</span><span class="statLabel">Autosave community members</span></li>
+          <li><span class="statNum">18,000+</span><span class="statLabel">Autosave community members</span></li>
           <li><span class="statNum">1,200+</span><span class="statLabel">Creators indexed on Influencees</span></li>
           <li><span class="statNum">20M+</span><span class="statLabel">Monthly road-safety impressions via ROADS.sg</span></li>
           <li><span class="statNum">1,000+</span><span class="statLabel">Attendees at Autosave events</span></li>
@@ -74,7 +74,7 @@ HOME_BODY = """
               <span class="cardName">Autosave</span>
               <span class="tag">Founder · 2022</span>
             </div>
-            <p>Singapore's most active automotive community — 20,000+ members, owner meets,
+            <p>Singapore's most active automotive community — 18,000+ members, owner meets,
               and motoring media. Brand campaigns with Mercedes-Benz, Shell, Porsche and
               Volkswagen Group. Named Best Automotive Community &amp; Media Platform 2025 &mdash; Singapore.</p>
             <span class="cardLink">www.autosave.club</span>
@@ -126,7 +126,8 @@ HOME_BODY = """
       <div class="shell">
         <p class="eyebrow">In the press</p>
         <h2>Selected media</h2>
-        <p class="muted">Interviewed by <a href="https://technode.global/2026/08/24/influencees-davidson-chua-on-measuring-creator-influence-beyond-follower-count-qa/" rel="noopener">TNGlobal</a> on measuring
+        <p class="muted">Profiled by <a href="https://www.techinasia.com/meet-ai-platform-helps-brands-evaluate-content-creators" rel="noopener">Tech in Asia</a> in its Startup
+          Spotlight series, interviewed by <a href="https://technode.global/2026/08/24/influencees-davidson-chua-on-measuring-creator-influence-beyond-follower-count-qa/" rel="noopener">TNGlobal</a> on measuring
           creator influence beyond follower count, profiled by NUS Computing, featured in
           The Straits Times on Singapore's tech ambitions, and a guest on three episodes of the ST
           <em>Work Talk</em> podcast. Panellist at ChargedUp 2026, Singapore's largest EV conference, and at Sgcarmart's Beyond Motion 2026.</p>
@@ -148,7 +149,7 @@ ABOUT_BODY = """
           Davidson Chua is a Singapore-based founder and community builder. He is the co-founder
           and CEO of Influencees, an AI-powered creator credibility and discovery platform for
           Southeast Asia, and the founder of Autosave, Singapore's most active automotive
-          community with more than 20,000 members.
+          community with more than 18,000 members.
         </p>
 
         <div class="portrait" style="margin:26px 0">
@@ -173,7 +174,7 @@ ABOUT_BODY = """
 
         <h2>Autosave</h2>
         <p>Autosave grew from a chat group into Singapore's most active automotive community:
-          <strong>20,000+ members</strong>, regular owner meets drawing over a thousand attendees,
+          <strong>18,000+ members</strong>, regular owner meets drawing over a thousand attendees,
           and a motoring media arm. Along the way we ran brand campaigns with
           <strong>Mercedes-Benz</strong>, <strong>Shell</strong>, <strong>Porsche</strong>,
           <strong>Volkswagen Group</strong>, Cycle &amp; Carriage, SGCarMart, Carousell Autos,
@@ -198,7 +199,9 @@ ABOUT_BODY = """
           themselves, and layers credibility signals on top: a verified creator index of
           <strong>1,200+ creators</strong>, a Trust Check, and an AI assistant for campaign work.</p>
 
-        <p>We've raised a six-figure round and the platform is live. The longer-term goal is an
+        <p>We launched in June 2026, raised a six-figure round from a corporate venture investor, and
+          were profiled by <a href="https://www.techinasia.com/meet-ai-platform-helps-brands-evaluate-content-creators" rel="noopener">Tech in Asia</a> in its Startup Spotlight
+          series. The longer-term goal is an
           intelligence layer for the creator economy — the place brands go to find, evaluate and
           work with creators, and the place creators go to be found on more than a vanity metric.</p>
 
@@ -246,7 +249,7 @@ ABOUT_BODY = """
 
           <dt>What is Autosave?</dt>
           <dd>Autosave (Autosave Pte. Ltd., UEN 202431449C) is Singapore's most active automotive
-            community, founded by Davidson Chua in 2022, with more than 20,000 members.</dd>
+            community, founded by Davidson Chua in 2022, with more than 18,000 members.</dd>
 
           <dt>What awards has Davidson Chua's work won?</dt>
           <dd>Autosave was named
@@ -255,7 +258,8 @@ ABOUT_BODY = """
             Awards.</dd>
 
           <dt>Where has Davidson Chua been interviewed?</dt>
-          <dd>Most recently in a <a href="https://technode.global/2026/08/24/influencees-davidson-chua-on-measuring-creator-influence-beyond-follower-count-qa/" rel="noopener">TNGlobal Q&amp;A</a> on measuring creator
+          <dd>Most recently profiled by <a href="https://www.techinasia.com/meet-ai-platform-helps-brands-evaluate-content-creators" rel="noopener">Tech in Asia</a> (Startup
+            Spotlight, August 2026) and interviewed in a <a href="https://technode.global/2026/08/24/influencees-davidson-chua-on-measuring-creator-influence-beyond-follower-count-qa/" rel="noopener">TNGlobal Q&amp;A</a> on measuring creator
             influence beyond follower count (August 2026). He has also been profiled by
             <a href="https://www.comp.nus.edu.sg/news/how-influencees-is-building-the-ai-layer-for-the-creator-economy/" rel="noopener">NUS
             Computing</a> and featured in The Straits Times. See the <a href="/media">media page</a>.</dd>
@@ -303,7 +307,7 @@ VENTURES_BODY = """
     <section class="section">
       <div class="shell">
         <h2>Influencees</h2>
-        <p class="muted small">Co-founder &amp; CEO · Founded 2026 · Singapore ·
+        <p class="muted small">Co-founder &amp; CEO · Launched June 2026 · Singapore ·
           <a href="https://www.influencees.com" rel="noopener">influencees.com</a></p>
 
         <p>Influencees is an AI-powered creator credibility and discovery platform for Southeast
@@ -322,7 +326,8 @@ VENTURES_BODY = """
 
         <h3>Story</h3>
         <p>Co-founded with <strong>Edwin Koh</strong>, whom I first met through the NUS Venture
-          Initiation Programme (VIP@SoC) as a mentor. We've raised a six-figure round. Influencees
+          Initiation Programme (VIP@SoC) as a mentor. We raised a six-figure round from a corporate
+          venture investor in April 2026 and launched in June 2026. Influencees
           also runs the <strong>Creator Creates Series</strong>, a creator hackathon — the 2026
           edition ran 19 creators, drew 1,700+ community votes and tracked 2,300+ link clicks.</p>
 
@@ -337,7 +342,7 @@ VENTURES_BODY = """
           <a href="https://www.autosave.club" rel="noopener">autosave.club</a></p>
 
         <p>Autosave is Singapore's most active automotive community — cars, media and meets. It
-          started as a Telegram group and grew into a network of <strong>20,000+ members</strong>
+          started as a Telegram group and grew into a network of <strong>18,000+ members</strong>
           across Telegram and social channels, with owner meets that have drawn over a thousand
           attendees.</p>
 
@@ -405,6 +410,21 @@ MEDIA_BODY = """
 
     <section class="section">
       <div class="shell">
+
+        <article class="mediaItem">
+          <div class="mediaMeta"><span class="outlet">Tech in Asia</span><span class="tag">Startup Spotlight</span></div>
+          <h3>Meet the AI platform that helps brands evaluate content creators</h3>
+          <p class="muted">Tech in Asia profiles Influencees in its Startup Spotlight series: how running
+            Autosave exposed the gap in how brands price creator campaigns, the platform's verified
+            network of 1,200+ Singapore creators since its June 2026 launch, and funding from a
+            corporate venture investor. By Peter Cowan, 31&nbsp;August&nbsp;2026.</p>
+          <p class="small"><a href="https://www.techinasia.com/meet-ai-platform-helps-brands-evaluate-content-creators" rel="noopener">Read the feature</a></p>
+          <figure>
+            <img src="/assets/media/techinasia-spotlight.webp" width="540" height="515" loading="lazy" decoding="async"
+                 alt="Tech in Asia Startup Spotlight on Influencees, featuring co-founders Davidson Chua and Edwin Koh">
+          </figure>
+          <p class="credit">Image credit: Tech in Asia</p>
+        </article>
 
         <article class="mediaItem">
           <div class="mediaMeta"><span class="outlet">TNGlobal</span><span class="tag">Q&amp;A interview</span></div>
@@ -582,7 +602,7 @@ CONTACT_BODY = """
         <h3>Short bio (for use in articles)</h3>
         <p class="muted">Davidson Chua is the co-founder and CEO of Influencees, an AI-powered creator
           credibility and discovery platform for Southeast Asia, and the founder of Autosave,
-          Singapore's most active automotive community with over 20,000 members. He holds a BSc
+          Singapore's most active automotive community with over 18,000 members. He holds a BSc
           (Honours) in Business Analytics from the National University of Singapore.</p>
 
         <h3>Headshot</h3>
@@ -611,13 +631,13 @@ POSTS = [
         "slug": "follower-count-is-a-bad-proxy-for-trust",
         "title": "Follower count is a bad proxy for trust",
         "desc": ("Why the creator economy's default metric measures the wrong thing, and what "
-                 "building a 20,000-member community taught Davidson Chua about credibility."),
+                 "building a 18,000-member community taught Davidson Chua about credibility."),
         "date": "2026-08-16",
         "readable_date": "16 August 2026",
         "body": """
         <p>I have spent the last four years on both sides of a lot of brand deals. First as the
         person running <a href="https://www.autosave.club" rel="noopener">Autosave</a>, a car
-        community in Singapore that grew from a Telegram group into something with 20,000-odd
+        community in Singapore that grew from a Telegram group into something with 18,000-odd
         members. Then as the person building
         <a href="https://www.influencees.com" rel="noopener">Influencees</a>, which exists because of
         a problem I kept running into from the first side.</p>
@@ -800,7 +820,7 @@ def build():
         title="Davidson Chua — Influencees Co-founder & CEO, Autosave Founder",
         desc=("Davidson Chua is a Singapore-based founder and community builder. Co-founder & CEO of "
               "Influencees, the creator credibility platform for Southeast Asia, and founder of "
-              "Autosave, Singapore's most active automotive community (20,000+ members)."),
+              "Autosave, Singapore's most active automotive community (18,000+ members)."),
         body=HOME_BODY,
         current="/",
         graph_extra=[{
@@ -1066,7 +1086,7 @@ Sitemap: {BASE}/sitemap.xml
 > Davidson Chua is a Singapore-based founder and community builder. He is the founder and
 > co-founder and CEO of Influencees, an AI-powered creator credibility and discovery platform for Southeast
 > Asia, and the founder of Autosave, Singapore's most active automotive community with more
-> than 20,000 members. He holds a BSc (Honours) in Business Analytics from the National
+> than 18,000 members. He holds a BSc (Honours) in Business Analytics from the National
 > University of Singapore. Autosave was named Best Automotive Community & Media Platform
 > 2025 (Singapore) in Corporate Vision's Automotive Awards.
 
@@ -1080,6 +1100,7 @@ Sitemap: {BASE}/sitemap.xml
 
 ## Selected coverage
 
+- Tech in Asia Startup Spotlight, 31 August 2026: "Meet the AI platform that helps brands evaluate content creators" — https://www.techinasia.com/meet-ai-platform-helps-brands-evaluate-content-creators
 - TNGlobal Q&A, 24 August 2026: "Influencees' Davidson Chua on measuring creator influence beyond follower count" — https://technode.global/2026/08/24/influencees-davidson-chua-on-measuring-creator-influence-beyond-follower-count-qa/
 - NUS Computing profile: https://www.comp.nus.edu.sg/news/how-influencees-is-building-the-ai-layer-for-the-creator-economy/
 - BLOCK71 Global feature on Autosave, 23 June 2026: https://block71.co/heres-what-founders-are-talking-about-on-social-this-month/

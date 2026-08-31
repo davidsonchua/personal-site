@@ -10,7 +10,7 @@ import json, os, shutil, datetime, html, re
 
 BASE = "https://davidsonchua.cc"
 OUT = "site"
-TODAY = "2026-08-25"
+TODAY = "2026-08-31"
 
 # ---------------------------------------------------------------------------
 # ENTITY GRAPH  — the single most important block on the site.
@@ -107,6 +107,17 @@ PERSON = {
     "subjectOf": [
         {
             "@type": "NewsArticle",
+            "@id": "https://www.techinasia.com/meet-ai-platform-helps-brands-evaluate-content-creators#article",
+            "headline": "Meet the AI platform that helps brands evaluate content creators",
+            "url": "https://www.techinasia.com/meet-ai-platform-helps-brands-evaluate-content-creators",
+            "datePublished": "2026-08-31",
+            "author": {"@type": "Person", "name": "Peter Cowan"},
+            "publisher": {"@type": "Organization", "name": "Tech in Asia", "url": "https://www.techinasia.com/"},
+            "isPartOf": {"@type": "CreativeWorkSeries", "name": "Startup Spotlight"},
+            "about": [{"@id": INFLUENCEES_ID}, {"@id": PERSON_ID}],
+        },
+        {
+            "@type": "NewsArticle",
             "@id": "https://technode.global/2026/08/24/influencees-davidson-chua-on-measuring-creator-influence-beyond-follower-count-qa/#article",
             "headline": "Influencees' Davidson Chua on measuring creator influence beyond follower count [Q&A]",
             "url": "https://technode.global/2026/08/24/influencees-davidson-chua-on-measuring-creator-influence-beyond-follower-count-qa/",
@@ -193,16 +204,18 @@ INFLUENCEES = {
         "Influencees syncs data directly from Instagram and TikTok so brands can evaluate "
         "creators on verified engagement rather than self-reported follower counts."
     ),
-    "foundingDate": "2026",
+    "foundingDate": "2026-06",
     "foundingLocation": {"@type": "Place", "address": {"@type": "PostalAddress", "addressCountry": "SG"}},
     "founder": [
         {"@id": PERSON_ID},
         {"@type": "Person", "name": "Edwin Koh"},
     ],
     "sameAs": [
+        "https://www.wikidata.org/wiki/Q141103633",
         "https://www.linkedin.com/company/influencees/",
         "https://www.instagram.com/influenceeshq",
         "https://x.com/influenceesHQ",
+        "https://app.dealroom.co/companies/influencees",
     ],
 }
 
@@ -213,7 +226,7 @@ AUTOSAVE = {
     "legalName": "Autosave Pte. Ltd.",
     "url": "https://www.autosave.club/",
     "description": (
-        "Singapore's most active automotive community, with 20,000+ members across Telegram "
+        "Singapore's most active automotive community, with 18,000+ members across Telegram "
         "and social channels, plus motoring media and owner meets."
     ),
     "foundingDate": "2022",
