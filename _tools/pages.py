@@ -418,10 +418,14 @@ MEDIA_BODY = """
             Autosave exposed the gap in how brands price creator campaigns, the platform's verified
             network of 1,200+ Singapore creators since its June 2026 launch, and funding from a
             corporate venture investor. By Peter Cowan, 31&nbsp;August&nbsp;2026.</p>
-          <p class="small"><a href="https://www.techinasia.com/meet-ai-platform-helps-brands-evaluate-content-creators" rel="noopener">Read the feature</a></p>
+          <p class="small"><a href="https://www.techinasia.com/meet-ai-platform-helps-brands-evaluate-content-creators" rel="noopener">Read the feature</a> ·
+            shared by Tech in Asia on
+            <a href="https://www.linkedin.com/posts/tech-in-asia_what-problem-does-it-solve-marketing-activity-7500417290429988864-zdTy" rel="noopener">LinkedIn</a>,
+            <a href="https://www.facebook.com/techinasia/posts/1488592489970419" rel="noopener">Facebook</a> and
+            <a href="https://www.instagram.com/p/Dcu3Idqljv-/" rel="noopener">Instagram</a></p>
           <figure>
-            <img src="/assets/media/techinasia-spotlight.webp" width="1000" height="1047" loading="lazy" decoding="async"
-                 alt="Tech in Asia Startup Spotlight article on Influencees by Peter Cowan, with co-founders Davidson Chua and Edwin Koh">
+            <img src="/assets/media/techinasia-spotlight.webp" width="1000" height="1249" loading="lazy" decoding="async"
+                 alt="Tech in Asia Startup Spotlight graphic: This startup helps brands evaluate content creators — Singapore-based Influencees, with co-founders Davidson Chua and Edwin Koh">
           </figure>
           <p class="credit">Image credit: Tech in Asia</p>
         </article>
