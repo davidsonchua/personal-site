@@ -306,6 +306,22 @@ def nav_html(current):
     return "\n        ".join(items)
 
 
+_CSS_V = None
+
+
+def css_version():
+    """Short content hash of site.css so the immutable cache busts on change."""
+    global _CSS_V
+    if _CSS_V is None:
+        import hashlib
+        try:
+            with open(os.path.join(OUT, "assets", "site.css"), "rb") as f:
+                _CSS_V = hashlib.md5(f.read()).hexdigest()[:8]
+        except OSError:
+            _CSS_V = "1"
+    return _CSS_V
+
+
 def head(*, title, desc, path, og_type="website", og_image=None, extra_head=""):
     canonical = f"{BASE}{path}"
     img = og_image or f"{BASE}/assets/og-image.png"
@@ -341,7 +357,7 @@ def head(*, title, desc, path, og_type="website", og_image=None, extra_head=""):
   <meta name="theme-color" content="#ffffff">
 
   <link rel="preload" as="image" href="/assets/profile-400.webp" fetchpriority="high">
-  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/site.css?v={css_version()}">
   <link rel="me" href="https://www.linkedin.com/in/davidsonchua/">
   <link rel="alternate" type="application/rss+xml" title="Davidson Chua — Writing" href="/writing/feed.xml">
 {extra_head}"""
