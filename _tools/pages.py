@@ -2,7 +2,7 @@
 """Page content for davidsonchua.cc — run via build.py"""
 import os, shutil, json, html
 from build import (BASE, OUT, PERSON_ID, SITE_ID, INFLUENCEES_ID, AUTOSAVE_ID,
-                   PERSON, CORE_GRAPH, page, write, breadcrumb, TODAY)
+                   PERSON, CORE_GRAPH, page, write, breadcrumb, TODAY, head)
 
 # ===========================================================================
 # HOME
@@ -589,6 +589,7 @@ CONTACT_BODY = """
 
         <ul class="contactList">
           <li><span class="k">Email</span><a href="mailto:davidsonchua@outlook.com">davidsonchua@outlook.com</a></li>
+          <li><span class="k">Contact card</span><a href="/davidson-chua.vcf" download="Davidson Chua.vcf">Save my contact (.vcf)</a> &middot; <a href="/card">view card</a></li>
           <li><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/davidsonchua/" rel="me noopener">linkedin.com/in/davidsonchua</a></li>
           <li><span class="k">Telegram</span><a href="https://t.me/davidsonchua" rel="me noopener">t.me/davidsonchua</a></li>
           <li><span class="k">X</span><a href="https://x.com/davidsonchua" rel="me noopener">@davidsonchua</a></li>
@@ -625,6 +626,131 @@ CONTACT_BODY = """
       </div>
     </section>
 """
+
+# ===========================================================================
+# CARD — digital business card at /card + downloadable vCard
+# ===========================================================================
+
+def make_vcf():
+    """Write site/davidson-chua.vcf (vCard 3.0, headshot embedded as base64 JPEG)."""
+    import base64, io
+    photo_b64 = ""
+    try:
+        from PIL import Image
+        src = os.path.join(OUT, "assets", "profile-800.webp")
+        im = Image.open(src).convert("RGB").resize((480, 480))
+        buf = io.BytesIO()
+        im.save(buf, "JPEG", quality=82, optimize=True)
+        photo_b64 = base64.b64encode(buf.getvalue()).decode()
+    except Exception as e:
+        print("vcf: photo skipped:", e)
+
+    lines = [
+        "BEGIN:VCARD",
+        "VERSION:3.0",
+        "N:Chua;Davidson;;;",
+        "FN:Davidson Chua",
+        "ORG:Influencees",
+        "TITLE:Co-founder & CEO",
+        "EMAIL;TYPE=INTERNET,WORK:davidson.chua@influencees.com",
+        "EMAIL;TYPE=INTERNET:davidsonchua@outlook.com",
+        "URL:https://davidsonchua.cc",
+        "item1.URL:https://www.linkedin.com/in/davidsonchua/",
+        "item1.X-ABLabel:LinkedIn",
+        "item2.URL:https://www.instagram.com/davidsonchua",
+        "item2.X-ABLabel:Instagram",
+        "item3.URL:https://x.com/davidsonchua",
+        "item3.X-ABLabel:X",
+        "item4.URL:https://t.me/davidsonchua",
+        "item4.X-ABLabel:Telegram",
+        "ADR;TYPE=WORK:;;;;;;Singapore",
+        "NOTE:Co-founder & CEO of Influencees; founder of Autosave (18,000+ member "
+        "automotive community). davidsonchua.cc",
+        f"REV:{TODAY}T00:00:00Z",
+    ]
+    if photo_b64:
+        lines.append("PHOTO;ENCODING=b;TYPE=JPEG:" + photo_b64)
+    lines.append("END:VCARD")
+
+    # RFC line folding: max 75 octets/line, continuations start with a space.
+    folded = []
+    for ln in lines:
+        folded.append(ln[:74])
+        ln = ln[74:]
+        while ln:
+            folded.append(" " + ln[:73])
+            ln = ln[73:]
+    with open(os.path.join(OUT, "davidson-chua.vcf"), "wb") as f:
+        f.write("\r\n".join(folded).encode("utf-8") + b"\r\n")
+    print("wrote site/davidson-chua.vcf")
+
+
+CARD_BODY = """
+    <section class="cardPage">
+      <div class="vcard">
+        <img class="vcardPhoto" src="/assets/profile-400.webp" width="120" height="120"
+             alt="Portrait of Davidson Chua">
+        <h1>Davidson Chua</h1>
+        <p class="vcardTitle">Co-founder &amp; CEO, Influencees<br>Founder, Autosave</p>
+
+        <a class="btn vcardSave" href="/davidson-chua.vcf" download="Davidson Chua.vcf">Save my contact</a>
+
+        <div class="vcardLinks">
+          <a class="btn ghost" href="mailto:davidson.chua@influencees.com">Email</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/davidsonchua/" rel="me noopener">LinkedIn</a>
+          <a class="btn ghost" href="https://www.instagram.com/davidsonchua" rel="me noopener">Instagram</a>
+          <a class="btn ghost" href="https://t.me/davidsonchua" rel="me noopener">Telegram</a>
+        </div>
+
+        <figure class="vcardQr">
+          <img src="/assets/card-qr.png" width="132" height="132" loading="lazy"
+               alt="QR code that opens davidsonchua.cc/card">
+          <figcaption>Scan to open this card</figcaption>
+        </figure>
+
+        <p class="vcardHome"><a href="/">davidsonchua.cc</a></p>
+      </div>
+    </section>
+"""
+
+
+def card_html():
+    """Standalone card page: no site nav/footer, same schema graph."""
+    graph = list(CORE_GRAPH) + [{
+        "@type": "WebPage",
+        "@id": f"{BASE}/card#webpage",
+        "url": f"{BASE}/card",
+        "name": "Davidson Chua — digital business card",
+        "isPartOf": {"@id": SITE_ID},
+        "about": {"@id": PERSON_ID},
+        "inLanguage": "en-SG",
+        "dateModified": TODAY,
+    }]
+    jsonld = json.dumps({"@context": "https://schema.org", "@graph": graph},
+                        indent=2, ensure_ascii=False)
+    h = head(
+        title="Davidson Chua — Digital Business Card",
+        desc=("Save Davidson Chua's contact details in one tap — co-founder & CEO of "
+              "Influencees, founder of Autosave, Singapore."),
+        path="/card",
+    )
+    return f"""<!doctype html>
+<html lang="en-SG">
+<head>
+  {h}
+
+  <script type="application/ld+json">
+{jsonld}
+  </script>
+</head>
+<body>
+  <main id="main">
+{CARD_BODY}
+  </main>
+</body>
+</html>
+"""
+
 
 # ===========================================================================
 # WRITING
@@ -1036,6 +1162,10 @@ def build():
             }],
         ))
 
+    # ---- Card (+ vCard file)
+    write("/card", card_html())
+    make_vcf()
+
     # ---- 404 (flat file)
     nf = page(path="/404.html", title="Page not found — Davidson Chua",
               desc="Page not found on davidsonchua.cc", body=NOTFOUND_BODY)
@@ -1047,7 +1177,8 @@ def build():
 
     # ---- sitemap.xml
     urls = [("/", "1.0"), ("/about", "0.9"), ("/ventures", "0.8"),
-            ("/writing", "0.8"), ("/media", "0.7"), ("/contact", "0.6")]
+            ("/writing", "0.8"), ("/media", "0.7"), ("/contact", "0.6"),
+            ("/card", "0.4")]
     urls += [(f"/writing/{p['slug']}", "0.7") for p in POSTS]
     entries = "\n".join(
         f"  <url>\n    <loc>{BASE}{u}</loc>\n    <lastmod>{TODAY}</lastmod>\n  </url>"
@@ -1183,6 +1314,11 @@ Influencees and Autosave, based in Singapore.
                 ]},
                 {"source": "/assets/(.*)", "headers": [
                     {"key": "Cache-Control", "value": "public, max-age=31536000, immutable"},
+                ]},
+                {"source": "/davidson-chua.vcf", "headers": [
+                    {"key": "Content-Type", "value": "text/vcard; charset=utf-8"},
+                    {"key": "Content-Disposition",
+                     "value": "attachment; filename=\"Davidson Chua.vcf\""},
                 ]},
             ],
         }, f, indent=2)
