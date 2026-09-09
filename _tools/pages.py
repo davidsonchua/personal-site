@@ -628,6 +628,195 @@ CONTACT_BODY = """
 """
 
 # ===========================================================================
+# PRESS — press kit at /press (bios, facts, downloadable photos)
+# ===========================================================================
+
+PRESS_PHOTOS = [
+    {
+        "slug": "davidson-chua-headshot",
+        "display": "/assets/profile-800.webp",
+        "download": "/assets/press/davidson-chua-headshot.jpg",
+        "w": 800, "h": 800,
+        "caption": "Davidson Chua — official headshot",
+        "credit": "Davidson Chua (own work, CC BY-SA 4.0)",
+        "date": "2026-08",
+    },
+    {
+        "slug": "davidson-chua-nus-enterprise-portrait",
+        "display": "/assets/press/davidson-chua-nus-enterprise-portrait.webp",
+        "download": "/assets/press/davidson-chua-nus-enterprise-portrait.jpg",
+        "w": 1200, "h": 675,
+        "caption": "Davidson Chua at NUS Enterprise (BLOCK71), Singapore, June 2026",
+        "credit": "Influencees · AMShots",
+        "date": "2026-06",
+    },
+    {
+        "slug": "influencees-cofounders-davidson-chua-edwin-koh",
+        "display": "/assets/press/influencees-cofounders-davidson-chua-edwin-koh.webp",
+        "download": "/assets/press/influencees-cofounders-davidson-chua-edwin-koh.jpg",
+        "w": 1200, "h": 675,
+        "caption": ("Influencees co-founders Edwin Koh (left) and Davidson Chua at NUS "
+                    "Enterprise, Singapore, June 2026"),
+        "credit": "Influencees · AMShots",
+        "date": "2026-06",
+    },
+    {
+        "slug": "davidson-chua-edwin-koh-block71",
+        "display": "/assets/press/davidson-chua-edwin-koh-block71.webp",
+        "download": "/assets/press/davidson-chua-edwin-koh-block71.jpg",
+        "w": 1200, "h": 675,
+        "caption": ("Influencees co-founders Davidson Chua (left) and Edwin Koh at "
+                    "BLOCK71 Singapore, June 2026"),
+        "credit": "Influencees · AMShots",
+        "date": "2026-06",
+    },
+    {
+        "slug": "davidson-chua-chargedup-2026-speaking",
+        "display": "/assets/press/davidson-chua-chargedup-2026-speaking.webp",
+        "download": "/assets/press/davidson-chua-chargedup-2026-speaking.jpg",
+        "w": 800, "h": 1200,
+        "caption": ("Davidson Chua (Founder, Autosave) speaking on the panel “Standards, "
+                    "Experience & Adoption: Building an Interoperable EV Journey Across "
+                    "Southeast Asia” at ChargedUp @ Singapore, July 2026"),
+        "credit": "ChargedUp @ Singapore · @visualsbyadverse",
+        "date": "2026-07-23",
+    },
+    {
+        "slug": "davidson-chua-chargedup-2026-panel-stage",
+        "display": "/assets/press/davidson-chua-chargedup-2026-panel-stage.webp",
+        "download": "/assets/press/davidson-chua-chargedup-2026-panel-stage.jpg",
+        "w": 1200, "h": 800,
+        "caption": ("Panellists of the ChargedUp @ Singapore 2026 EV interoperability panel; "
+                    "Davidson Chua (Founder, Autosave) second from right"),
+        "credit": "ChargedUp @ Singapore · @visualsbyadverse",
+        "date": "2026-07-23",
+    },
+    {
+        "slug": "davidson-chua-chargedup-2026-panel-seated",
+        "display": "/assets/press/davidson-chua-chargedup-2026-panel-seated.webp",
+        "download": "/assets/press/davidson-chua-chargedup-2026-panel-seated.jpg",
+        "w": 1200, "h": 800,
+        "caption": ("Davidson Chua on stage during the ChargedUp @ Singapore 2026 panel "
+                    "discussion"),
+        "credit": "ChargedUp @ Singapore · @visualsbyadverse",
+        "date": "2026-07-23",
+    },
+]
+
+
+def press_body():
+    figs = []
+    for p in PRESS_PHOTOS:
+        figs.append(f"""
+          <figure class="pressPhoto">
+            <img src="{p['display']}" width="{p['w']}" height="{p['h']}" loading="lazy"
+                 alt="{html.escape(p['caption'])}">
+            <figcaption>
+              <span>{html.escape(p['caption'])}</span>
+              <span class="muted small">Photo: {html.escape(p['credit'])}</span>
+              <a class="small" href="{p['download']}" download>Download high-resolution JPG</a>
+            </figcaption>
+          </figure>""")
+    photos_html = "\n".join(figs)
+
+    return f"""
+    <section class="section tight">
+      <div class="shell">
+        <p class="eyebrow">Press kit</p>
+        <h1>Davidson Chua — Press Kit</h1>
+        <p class="lead">Bios, facts and photography for journalists and event organisers.
+          Everything on this page may be republished with the credits shown.
+          For interviews and comment: <a href="mailto:davidsonchua@outlook.com">davidsonchua@outlook.com</a>.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <h2>Boilerplate bios</h2>
+        <h3>One-liner</h3>
+        <p class="muted">Davidson Chua is the co-founder and CEO of Influencees and the founder of
+          Autosave, based in Singapore.</p>
+        <h3>Short bio</h3>
+        <p class="muted">Davidson Chua is the co-founder and CEO of Influencees, an AI-powered creator
+          credibility and discovery platform for Southeast Asia, and the founder of Autosave,
+          Singapore's most active automotive community with over 18,000 members. He holds a BSc
+          (Honours) in Business Analytics from the National University of Singapore.</p>
+        <h3>Name &amp; pronunciation</h3>
+        <p class="muted">Davidson Chua (family name: Chua). Referred to as “Chua” on second
+          reference.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <h2>Facts at a glance</h2>
+        <ul class="contactList">
+          <li><span class="k">Role</span><span>Co-founder &amp; CEO, Influencees; Founder, Autosave</span></li>
+          <li><span class="k">Based in</span><span>Singapore</span></li>
+          <li><span class="k">Influencees</span><span>AI-powered creator credibility &amp; discovery platform for
+            Southeast Asia; launched June 2026; incubated via the NUS Venture Initiation Programme;
+            undisclosed round from a corporate venture investor (April 2026)</span></li>
+          <li><span class="k">Autosave</span><span>Singapore's most active automotive community; founded 2022;
+            18,000+ members; Best Automotive Community &amp; Media Platform 2025 (Corporate Vision)</span></li>
+          <li><span class="k">Education</span><span>BSc (Honours) in Business Analytics, National University of
+            Singapore</span></li>
+          <li><span class="k">Coverage</span><a href="/media">Selected media &amp; interviews →</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <h2>Photos</h2>
+        <p class="muted">Click any photo to download the high-resolution version. Please keep the
+          credit lines when republishing.</p>
+        <div class="pressGrid">
+{photos_html}
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <h2>Contact</h2>
+        <ul class="contactList">
+          <li><span class="k">Email</span><a href="mailto:davidsonchua@outlook.com">davidsonchua@outlook.com</a></li>
+          <li><span class="k">Contact card</span><a href="/davidson-chua.vcf" download="Davidson Chua.vcf">Save contact (.vcf)</a></li>
+          <li><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/davidsonchua/" rel="me noopener">linkedin.com/in/davidsonchua</a></li>
+        </ul>
+      </div>
+    </section>
+"""
+
+
+def press_graph():
+    imgs = []
+    for p in PRESS_PHOTOS:
+        imgs.append({
+            "@type": "ImageObject",
+            "@id": f"{BASE}/press#{p['slug']}",
+            "contentUrl": f"{BASE}{p['download']}",
+            "thumbnailUrl": f"{BASE}{p['display']}",
+            "caption": p["caption"],
+            "creditText": p["credit"],
+            "about": {"@id": PERSON_ID},
+            "representativeOfPage": p is PRESS_PHOTOS[0],
+            "datePublished": p["date"],
+            "inLanguage": "en-SG",
+        })
+    return [{
+        "@type": "WebPage",
+        "@id": f"{BASE}/press#webpage",
+        "url": f"{BASE}/press",
+        "name": "Davidson Chua — Press Kit",
+        "isPartOf": {"@id": SITE_ID},
+        "about": {"@id": PERSON_ID},
+        "inLanguage": "en-SG",
+        "dateModified": TODAY,
+    }] + imgs
+
+
+# ===========================================================================
 # CARD — digital business card at /card + downloadable vCard
 # ===========================================================================
 
@@ -1162,6 +1351,16 @@ def build():
             }],
         ))
 
+    # ---- Press kit
+    write("/press", page(
+        path="/press",
+        title="Press Kit — Davidson Chua",
+        desc=("Press kit for Davidson Chua: boilerplate bios, facts, and downloadable "
+              "high-resolution photos for journalists and event organisers."),
+        body=press_body(),
+        graph_extra=press_graph(),
+    ))
+
     # ---- Card (+ vCard file)
     write("/card", card_html())
     make_vcf()
@@ -1178,7 +1377,7 @@ def build():
     # ---- sitemap.xml
     urls = [("/", "1.0"), ("/about", "0.9"), ("/ventures", "0.8"),
             ("/writing", "0.8"), ("/media", "0.7"), ("/contact", "0.6"),
-            ("/card", "0.4")]
+            ("/card", "0.4"), ("/press", "0.5")]
     urls += [(f"/writing/{p['slug']}", "0.7") for p in POSTS]
     entries = "\n".join(
         f"  <url>\n    <loc>{BASE}{u}</loc>\n    <lastmod>{TODAY}</lastmod>\n  </url>"
